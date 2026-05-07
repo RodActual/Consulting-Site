@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 
 // --- Types & Interfaces ---
@@ -28,7 +30,7 @@ type OperatingSystemData = Record<string, SectionData>;
 // --- Data ---
 const SECTIONS = [
   "Overview",
-  "The Operating System",
+  "The Digital Foundation",
   "Engagement Tiers",
   "Capacity & Process",
   "Case Study",
@@ -45,9 +47,9 @@ const data: OperatingSystemData = {
       {
         type: "pillars",
         items: [
-          { label: "Architect", desc: "Design a unified, secure infrastructure that replaces your scattered tools." },
-          { label: "Stabilize", desc: "Eliminate data leaks, lost passwords, and communication silos with enterprise-grade encryption." },
-          { label: "Scale", desc: "Automate lead flow and reporting so your business grows without increasing your workload." },
+          { label: "Centralize", desc: "Design a unified, secure infrastructure that replaces your scattered tools." },
+          { label: "Protect", desc: "Eliminate data leaks, lost passwords, and communication silos with enterprise-grade encryption." },
+          { label: "Automate", desc: "Automate lead flow and reporting so your business grows without increasing your workload." },
         ],
       },
       {
@@ -56,26 +58,26 @@ const data: OperatingSystemData = {
       },
     ],
   },
-  "The Operating System": {
-    icon: "⚙️",
+  "The Digital Foundation": {
+    icon: "◈",
     content: [
       { type: "section-title", text: "Your New Digital Infrastructure" },
       { type: "intro", text: "Every engagement includes a proprietary stack of privacy-first, enterprise tools. This isn't just software; it's your business's nervous system." },
       {
         type: "table",
-        headers: ["Module", "Function", "Business Impact"],
+        headers: ["The Fix", "How It Works", "The Relief"],
         rows: [
-          ["Secure Comms Hub", "Encrypted email with dedicated aliases (billing, support)", "Zero leakage. All client data stays private and organized."],
-          ["Credential Command", "Shared, encrypted vaults for all logins & 2FA", "No more 'forgot password' emails. Instant access for you, secure control for me."],
-          ["Live Reporting", "Real-time encrypted dashboards (Docs)", "Stop guessing. See your KPIs, ad spend, and tasks in a live, secure document."],
-          ["Capacity Gating", "Smart scheduling with tiered availability", "Guaranteed focus. I only accept clients who fit my current operational bandwidth."],
+          ["Organized Comms", "Routes all billing and support into dedicated, secure channels", "Stop digging through a chaotic personal inbox to find an important client request."],
+          ["Password Protection", "One secure, encrypted vault for every tool login you own", "Never click 'Forgot Password' or text a team member for a 2FA code again."],
+          ["Live Tracking", "A single, real-time dashboard for all your core numbers", "Stop guessing. Always know exactly where your KPIs and ad spend stand."],
+          ["Dedicated Focus", "A strict, hard-coded cap on my active client roster", "You never have to worry about your project being pushed to the back burner."],
         ],
       },
       { type: "highlight", text: "This stack is included in every tier. You aren't paying for tools; you're paying for the system that makes them work." },
     ],
   },
   "Engagement Tiers": {
-    icon: "◇",
+    icon: "◈",
     content: [
       { type: "section-title", text: "System Stabilization (Entry)" },
       {
@@ -143,7 +145,7 @@ const data: OperatingSystemData = {
     ],
   },
   "Capacity & Process": {
-    icon: "◌",
+    icon: "◈",
     content: [
       { type: "intro", text: "Quality is non-negotiable. I operate on a Capacity-Gated Model to ensure every client receives 100% of my focus." },
       {
@@ -170,7 +172,7 @@ const data: OperatingSystemData = {
     ],
   },
   "Case Study": {
-    icon: "◎",
+    icon: "◈",
     content: [
       { type: "intro", text: "JW Cleaning: From Chaos to Clarity." },
       {
@@ -417,7 +419,7 @@ export default function BusinessPlan() {
               letterSpacing: "-0.01em",
               color: "#e8e0d0",
               lineHeight: "1.2",
-            }}>Fractional Digital Operations</h1>
+            }}>Anthony Rodriguez - Digital Operations Consultant</h1>
             <div style={{ color: "#5a5248", fontSize: "13px", marginTop: "4px", fontStyle: "italic" }}>
               Building secure, scalable systems for service businesses.
             </div>
