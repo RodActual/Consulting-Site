@@ -1,4 +1,17 @@
 /* [project]/app/globals.css [app-client] (css) */
+*, :before, :after {
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /*# sourceMappingURL=app_globals_0jn8.0u.css.map*/

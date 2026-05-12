@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Projects/ConsultingSite/app/globals.css"],"sourcesContent":[""],"names":[],"mappings":""}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Projects/ConsultingSite/app/globals.css"],"sourcesContent":["*, *::before, *::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml, body {\r\n  margin: 0;\r\n  padding: 0;\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA"}}]
 }
