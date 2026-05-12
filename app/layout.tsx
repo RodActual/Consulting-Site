@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
+
 export const metadata: Metadata = {
-  title: "Digital Operations Architecture | Fractional Consultant",
+  title: "Rodriguez Digital Operations, LLC. | Fractional Consultant",
   description: "I build secure, scalable digital operating systems for service businesses. Replace chaotic tools with a unified, encrypted infrastructure.",
   keywords: ["digital operations", "fractional consultant", "business systems", "secure infrastructure", "service business"],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Anthony Rodriguez" }],
   openGraph: {
-    title: "Digital Operations Architecture",
+    title: "Rodriguez Digital Operations, LLC.",
     description: "Stop juggling tools. I build secure, scalable systems for service businesses.",
     type: "website",
   },
@@ -22,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
