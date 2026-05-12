@@ -34,7 +34,7 @@ export default function BusinessPlan() {
           fontFamily: "'Courier New', monospace",
           fontSize: "10px",
           letterSpacing: "0.2em",
-          color: "#5a5248",
+          color: "#a8a397",
           textTransform: "uppercase",
           marginBottom: "8px",
         }}>
@@ -47,19 +47,19 @@ export default function BusinessPlan() {
               fontSize: "28px",
               fontWeight: "400",
               letterSpacing: "-0.01em",
-              color: "#e8e0d0",
+              color: "#a8a397",
               lineHeight: "1.2",
             }}>
               Rodriguez Digital Operations, LLC.
             </h1>
-            <div style={{ color: "#5a5248", fontSize: "13px", marginTop: "4px", fontStyle: "italic" }}>
+            <div style={{ color: "#a8a397", fontSize: "13px", marginTop: "4px", fontStyle: "italic" }}>
               Building secure, scalable systems for service businesses.
             </div>
           </div>
           <div style={{
             fontFamily: "'Courier New', monospace",
             fontSize: "11px",
-            color: "#3a3530",
+            color: "#a8a397",
             textAlign: "right",
             lineHeight: "1.8",
           }}>
@@ -124,13 +124,13 @@ export default function BusinessPlan() {
 
       {/* Footer */}
       <div style={{
-        borderTop: "1px solid #1a1815",
+        borderTop: "1px solid #a8a397",
         padding: "12px 40px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
       }}>
-        <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#2a2520" }}>
+        <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#a8a397" }}>
           © 2026 Rodriguez Digital Operations, LLC. All rights reserved.
         </div>
       </div>

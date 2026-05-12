@@ -87,7 +87,7 @@ export const data: Record<string, { icon: string; content: any[] }> = {
               "Performance reporting (opens, clicks, unsubscribes)",
               "Campaign copywriting and layout",
             ],
-            note: "For businesses with an existing customer list that want to stay top of mind without lifting a finger. Any additional email services outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+            note: "For businesses with an existing customer list that want to stay top of mind without lifting a finger. Any additional email services outside this scope will be quoted and added to your monthly rate. Cancel anytime with 30 days written notice, no fees.",
           },
           {
             name: "Site, Maintenance & SEO",
@@ -100,7 +100,7 @@ export const data: Record<string, { icon: string; content: any[] }> = {
               "Local SEO: show up when people search for what you do",
               "Monthly performance check-in",
             ],
-            note: "For businesses that want a professional web presence that actually gets found. Any additional site or SEO work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+            note: "For businesses that want a professional web presence that actually gets found. Any additional site or SEO work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 30 days written notice, no fees.",
           },
           {
             name: "Site, Maintenance, SEO & Ads",
@@ -111,7 +111,7 @@ export const data: Record<string, { icon: string; content: any[] }> = {
               "Daily budget monitoring and ad creative refreshes",
               "Monthly ad performance report",
             ],
-            note: "For businesses ready to actively bring in new leads alongside a maintained, visible web presence. Any additional ad or site work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+            note: "For businesses ready to actively bring in new leads alongside a maintained, visible web presence. Any additional ad or site work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 30 days written notice, no fees.",
             highlight: true,
           },
           {
@@ -124,7 +124,7 @@ export const data: Record<string, { icon: string; content: any[] }> = {
               "Unified monthly report across all channels",
               "Priority response - within 2 business hours",
             ],
-            note: "For businesses that want everything handled in one place by one person. Any services requested outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+            note: "For businesses that want everything handled in one place by one person. Any services requested outside this scope will be quoted and added to your monthly rate. Cancel anytime with 30 days written notice, no fees.",
           },
         ],
       },

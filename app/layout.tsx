@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Rodriguez Digital Operations, LLC.",
   description: "I build secure, scalable digital operating systems for service businesses. Replace chaotic tools with a unified, encrypted infrastructure.",
-  keywords: ["digital operations", "fractional consultant", "business systems", "secure infrastructure", "service business"],
+  keywords: ["digital operations", "fractional consultant", "business systems", "secure infrastructure", "service business", "website hosting", "website building", "automation", "data management", "scalable systems", "ad management", "email marketing", "analytics", "custom solutions"],
   authors: [{ name: "Anthony Rodriguez" }],
   openGraph: {
     title: "Rodriguez Digital Operations, LLC.",

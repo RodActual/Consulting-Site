@@ -35,7 +35,7 @@ export default function SectionContent({ content }: SectionContentProps) {
             fontFamily: "'Courier New', monospace",
             fontSize: "10px",
             letterSpacing: "0.15em",
-            color: "#5a5248",
+            color: "#a8a397",
             textTransform: "uppercase",
             borderBottom: "1px solid #1e1c1a",
             paddingBottom: "6px",
@@ -76,7 +76,7 @@ export default function SectionContent({ content }: SectionContentProps) {
                       textAlign: "left", padding: "8px 12px",
                       fontFamily: "'Courier New', monospace",
                       fontSize: "10px", letterSpacing: "0.1em",
-                      color: "#5a5248", textTransform: "uppercase",
+                      color: "#a8a397", textTransform: "uppercase",
                       borderBottom: "1px solid #2a2520",
                       background: "rgba(255,255,255,0.01)",
                     }}>{h}</th>
@@ -124,7 +124,7 @@ export default function SectionContent({ content }: SectionContentProps) {
                 gap: "16px", padding: "10px 0",
                 borderBottom: "1px solid #1a1815",
               }}>
-                <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#5a5248", textTransform: "uppercase" }}>
+                <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#a8a397", textTransform: "uppercase" }}>
                   {item.label}
                 </div>
                 <div style={{ fontSize: "13px", color: "#8a8278", lineHeight: "1.6" }}>
