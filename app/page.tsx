@@ -31,9 +31,10 @@ type OperatingSystemData = Record<string, SectionData>;
 const SECTIONS = [
   "Overview",
   "The Digital Foundation",
-  "Engagement Tiers",
+  "What I Offer",
   "Capacity & Process",
-  "Case Study",
+  "Who You're Working With",
+  "Client Questionnaire",
 ];
 
 const data: OperatingSystemData = {
@@ -58,133 +59,166 @@ const data: OperatingSystemData = {
       },
     ],
   },
-  "The Digital Foundation": {
-    icon: "◈",
-    content: [
-      { type: "section-title", text: "Your New Digital Infrastructure" },
-      { type: "intro", text: "Every engagement includes a proprietary stack of privacy-first, enterprise tools. This isn't just software; it's your business's nervous system." },
-      {
-        type: "table",
-        headers: ["The Fix", "How It Works", "The Relief"],
-        rows: [
-          ["Organized Comms", "Routes all billing and support into dedicated, secure channels", "Stop digging through a chaotic personal inbox to find an important client request."],
-          ["Password Protection", "One secure, encrypted vault for every tool login you own", "Never click 'Forgot Password' or text a team member for a 2FA code again."],
-          ["Live Tracking", "A single, real-time dashboard for all your core numbers", "Stop guessing. Always know exactly where your KPIs and ad spend stand."],
-          ["Dedicated Focus", "A strict, hard-coded cap on my active client roster", "You never have to worry about your project being pushed to the back burner."],
+"The Digital Foundation": {
+  icon: "◈",
+  content: [
+    { type: "section-title", text: "How I Operate Behind The Scenes" },
+    { 
+      type: "intro", 
+      text: "This is the infrastructure I run my practice on — not billed to you, not negotiable. Every client I work with benefits from a consultant who operates on a private, organized, and accountable foundation." 
+    },
+    {
+      type: "table",
+      headers: ["What It Is", "What It Means For You"],
+      rows: [
+        [
+          "Encrypted Communication & Storage",
+          "Your files, emails, and shared documents live in Proton Drive — not a personal Gmail or a free Dropbox. Everything is end-to-end encrypted by default."
         ],
-      },
-      { type: "highlight", text: "This stack is included in every tier. You aren't paying for tools; you're paying for the system that makes them work." },
-    ],
-  },
-  "Engagement Tiers": {
-    icon: "◈",
-    content: [
-      { type: "section-title", text: "System Stabilization (Entry)" },
-      {
-        type: "tiers",
-        items: [
-          {
-            name: "Foundation",
-            price: "$400/mo",
-            features: [
-              "Unified Communications Hub (Aliases)",
-              "Credential Vault Setup & Migration",
-              "Automated Backup Protocols",
-              "Monthly Security Audit",
-            ],
-            note: "Ideal for businesses drowning in scattered tools.",
-          },
+        [
+          "Secure Password Management",
+          "Every login, credential, and access key related to your accounts is stored in Proton Pass. No sticky notes, no texting passwords, no shared spreadsheets."
         ],
-      },
-      { type: "section-title", text: "Operational Scaling (Core)" },
-      {
-        type: "tiers",
-        items: [
-          {
-            name: "Growth Engine",
-            price: "$650/mo",
-            features: [
-              "Everything in Foundation",
-              "Lead Flow Automation (Form → CRM)",
-              "Ad Ops Management (Meta/Google)",
-              "Live Performance Dashboard",
-              "Weekly Optimization Sprints",
-            ],
-            note: "The standard for scaling service businesses.",
-            highlight: true,
-          },
+        [
+          "Clean Invoicing & Billing",
+          "All invoices and payments run through Found, a dedicated business account. You always have a clear record of what was billed and when."
         ],
-      },
-      { type: "section-title", text: "Enterprise Infrastructure (Premium)" },
-      {
-        type: "tiers",
-        items: [
-          {
-            name: "Full Ops",
-            price: "$900–$1,200/mo",
-            features: [
-              "Everything in Growth",
-              "Multi-Channel Orchestration",
-              "Compliance & Audit Trails",
-              "Strategic Quarterly Reviews",
-              "Priority 24h Response SLA",
-            ],
-            note: "For businesses ready to scale to $1M+.",
-          },
+        [
+          "Honest Time Tracking",
+          "Every hour worked is logged in Toggl Track in real time. Your monthly report reflects actual time spent — not an estimate."
         ],
-      },
-      { type: "section-title", text: "One-Time Architecture Builds" },
-      {
-        type: "simple-list",
-        items: [
-          "System Audit & Roadmap: $1,500 (Includes full tool stack setup)",
-          "Infrastructure Migration: $2,500+ (Moving from legacy tools to your OS)",
-          "Custom Automation Scripts: Quoted based on complexity",
-        ],
-      },
-    ],
-  },
+      ],
+    },
+    { 
+      type: "highlight", 
+      text: "These are my standards, not your deliverables. You benefit from them because I refuse to work any other way." 
+    },
+  ],
+},
+"What I Offer": {
+  icon: "◈",
+  content: [
+    { type: "section-title", text: "Monthly Retainers" },
+    {
+      type: "tiers",
+      items: [
+        {
+          name: "Site & Maintenance",
+          price: "$750/mo",
+          features: [
+            "Custom website built for your business",
+            "Ongoing updates and content changes",
+            "Security monitoring and uptime checks",
+            "Monthly performance check-in",
+          ],
+          note: "For businesses that want a professional web presence without the headache of managing it themselves.",
+        },
+        {
+          name: "Site, Maintenance & Ads",
+          price: "$1,000/mo",
+          features: [
+            "Everything in Site & Maintenance",
+            "Ad campaign setup and management (Meta or Google)",
+            "Daily budget monitoring and ad creative refreshes",
+            "Monthly ad performance report",
+          ],
+          note: "For businesses ready to actively bring in new leads alongside a maintained web presence.",
+          highlight: true,
+        },
+        {
+          name: "Takeover & Cleanup",
+          price: "$750/mo",
+          features: [
+            "Full takeover of your existing website",
+            "30-day cleanup: outdated content, broken links, speed issues",
+            "Hosting migration if needed",
+            "Ongoing maintenance after cleanup is complete",
+          ],
+          note: "First 30 days billed at $900/mo to cover the cleanup workload. Drops to $750/mo once the site is in good shape.",
+        },
+      ],
+    },
+    { type: "section-title", text: "One-Time Builds" },
+    {
+      type: "simple-list",
+      items: [
+        "Website Build (No Maintenance): $500 — A clean, professional site handed off fully to you.",
+      ],
+    },
+    {
+      type: "highlight",
+      text: "Not sure which fits? Every engagement starts with a free conversation to figure out what your business actually needs.",
+    },
+  ],
+},
   "Capacity & Process": {
+  icon: "◈",
+  content: [
+    { type: "section-title", text: "How I Work" },
+    {
+      type: "intro",
+      text: "I keep my client list small on purpose. Every business I work with gets my direct attention — not a ticketing system, not a shared inbox, not someone I delegated it to. That only works if I'm not stretched thin.",
+    },
+    {
+      type: "profile",
+      items: [
+        { label: "Active Clients", value: "4–5 at any given time. When I'm full, I'm full." },
+        { label: "New Projects", value: "One new website build per month during peak season." },
+        { label: "Onboarding", value: "Every new client goes through a 30-day ramp-up so nothing gets missed and nothing gets rushed." },
+        { label: "Off-boarding", value: "If we part ways, you leave with everything — full credential handoff within 5 business days, no hassle." },
+      ],
+    },
+    { type: "section-title", text: "What Onboarding Looks Like" },
+    {
+      type: "intro",
+      text: "The first 30 days aren't billable chaos — they follow a defined process so you know exactly what's happening and when.",
+    },
+    {
+      type: "checklist",
+      items: [
+        "Audit your current tools, accounts, and digital presence",
+        "Identify gaps and quick wins",
+        "Set up secure credential storage for all managed accounts",
+        "Build or connect your communication channels",
+        "Launch your dashboard or site and confirm everything is stable",
+        "30-day check-in to make sure it's all working for you",
+      ],
+    },
+    {
+      type: "highlight",
+      text: "If my calendar is full, it means the businesses I'm already working with are getting everything I've got. I'd rather tell you that upfront than overpromise.",
+    },
+  ],
+},
+  "Who You're Working With": {
+  icon: "◈",
+  content: [
+    { type: "section-title", text: "Who You're Working With" },
+    {
+      type: "intro",
+      text: "I'm Anthony Rodriguez — a solo digital operations consultant based in Dayton, Ohio. Before building this practice, I spent six years in the U.S. Army as a Squad Leader and another three years deploying enterprise CRM systems for one of the largest automotive software companies in the country. I know what it means to be accountable for a system that has to work.",
+    },
+    {
+      type: "profile",
+      items: [
+        { label: "Focus", value: "Website management, digital operations, and ad strategy for small service businesses." },
+       { label: "Background", value: "U.S. Army Combat Engineer (Squad Leader), CRM Implementation Specialist at Reynolds & Reynolds, and B.S. Cybersecurity & Networking graduate from Miami University — GPA 3.94." },
+        { label: "Clearance", value: "U.S. Government Secret Clearance — inactive, eligible for reinstatement." },
+        { label: "Approach", value: "Solo and intentional. I cap my client roster so every business I work with gets my full attention — not a junior employee's." },
+        { label: "Location", value: "Dayton, Ohio — available remotely." },
+        { label: "Response Time", value: "Non-urgent requests within 1 business day. Site emergencies within 4 business hours." },
+      ],
+    },
+    {
+      type: "highlight",
+      text: "I started this practice because most small businesses don't need an agency — they need one person who knows what they're doing and actually shows up.",
+    },
+  ],
+},
+
+  "Client Questionnaire": {
     icon: "◈",
-    content: [
-      { type: "intro", text: "Quality is non-negotiable. I operate on a Capacity-Gated Model to ensure every client receives 100% of my focus." },
-      {
-        type: "profile",
-        items: [
-          { label: "Max Active Clients", value: "4–5 Retainers" },
-          { label: "New Builds", value: "1 per month (Summer peak)" },
-          { label: "Onboarding", value: "Strict 30-day ramp-up protocol" },
-          { label: "Exit Strategy", value: "Full credential handoff in <5 days" },
-        ],
-      },
-      { type: "highlight", text: "If my calendar is full, it means I'm delivering maximum value to my current partners. I do not overpromise." },
-      { type: "section-title", text: "The Onboarding Protocol" },
-      {
-        type: "checklist",
-        items: [
-          "System Audit & Gap Analysis",
-          "Secure Vault Creation & Migration",
-          "Comms Channel Setup (Aliases)",
-          "Live Dashboard Initialization",
-          "30-Day Stability Check-in",
-        ],
-      },
-    ],
-  },
-  "Case Study": {
-    icon: "◈",
-    content: [
-      { type: "intro", text: "JW Cleaning: From Chaos to Clarity." },
-      {
-        type: "profile",
-        items: [
-          { label: "Challenge", value: "Owner managed 4 different tools, lost leads in email, no secure password storage." },
-          { label: "Solution", value: "Deployed 'Growth Engine' OS. Unified comms, automated lead capture, secured vault." },
-          { label: "Result", value: "20% increase in booked calls, 100% data security, owner reclaimed 8hrs/week." },
-        ],
-      },
-      { type: "highlight", text: "This isn't a website. It's a business transformation." },
-    ],
+    content: [],
   },
 };
 
@@ -384,6 +418,322 @@ function SectionContent({ content }: { content: ContentBlock[] }) {
   );
 }
 
+function ClientQuestionnaire() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [form, setForm] = useState({
+    // Business Basics
+    businessName: "",
+    ownerName: "",
+    email: "",
+    phone: "",
+    industry: "",
+    location: "",
+    yearsInBusiness: "",
+    // Branding
+    hasLogo: "",
+    brandColors: "",
+    brandFeel: "",
+    existingSite: "",
+    existingSiteUrl: "",
+    // Goals
+    primaryGoal: "",
+    targetAudience: "",
+    competitors: "",
+    successLookLike: "",
+    timeline: "",
+    additionalNotes: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+    try {
+      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          ...form,
+          _subject: `New Discovery Questionnaire — ${form.businessName}`,
+        }),
+      });
+      if (res.ok) setStatus("success");
+      else setStatus("error");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const inputStyle: React.CSSProperties = {
+    width: "100%",
+    background: "rgba(255,255,255,0.03)",
+    border: "1px solid #2a2520",
+    borderRadius: "3px",
+    padding: "10px 14px",
+    color: "#d0c8b8",
+    fontSize: "13px",
+    fontFamily: "'Georgia', serif",
+    outline: "none",
+    boxSizing: "border-box",
+    transition: "border-color 0.15s ease",
+  };
+
+  const labelStyle: React.CSSProperties = {
+    fontFamily: "'Courier New', monospace",
+    fontSize: "10px",
+    letterSpacing: "0.12em",
+    color: "#5a5248",
+    textTransform: "uppercase",
+    display: "block",
+    marginBottom: "6px",
+  };
+
+  const fieldStyle: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "0px",
+  };
+
+  const groupStyle: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
+  };
+
+  const sectionLabelStyle: React.CSSProperties = {
+    fontFamily: "'Courier New', monospace",
+    fontSize: "10px",
+    letterSpacing: "0.15em",
+    color: "#5a5248",
+    textTransform: "uppercase",
+    borderBottom: "1px solid #1e1c1a",
+    paddingBottom: "6px",
+    marginTop: "8px",
+    marginBottom: "4px",
+  };
+
+  if (status === "success") return (
+    <div style={{
+      border: "1px solid #2a4a2a",
+      borderRadius: "4px",
+      padding: "40px",
+      textAlign: "center",
+      background: "rgba(42,74,42,0.06)",
+    }}>
+      <div style={{ fontFamily: "'Courier New', monospace", fontSize: "12px", color: "#4a8a4a", letterSpacing: "0.15em", marginBottom: "12px" }}>
+        QUESTIONNAIRE RECEIVED
+      </div>
+      <div style={{ fontFamily: "'Georgia', serif", fontSize: "16px", color: "#d0c8b8", marginBottom: "8px" }}>
+        Thank you — I'll be in touch within one business day.
+      </div>
+      <div style={{ fontSize: "12px", color: "#5a5248" }}>
+        A copy of your responses has been sent to rodactual@proton.me
+      </div>
+    </div>
+  );
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+      <p style={{ color: "#b0a898", fontSize: "14px", lineHeight: "1.8", margin: 0 }}>
+        Fill this out as completely as you can. There are no wrong answers — this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
+      </p>
+
+      {/* Business Basics */}
+      <div style={groupStyle}>
+        <div style={sectionLabelStyle}>Business Basics</div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+          {[
+            { label: "Business Name", name: "businessName", placeholder: "Company LLC" },
+            { label: "Your Name", name: "ownerName", placeholder: "First Last" },
+            { label: "Email Address", name: "email", placeholder: "you@yourbusiness.com" },
+            { label: "Phone Number", name: "phone", placeholder: "(555) 000-0000" },
+            { label: "Industry / Type of Business", name: "industry", placeholder: "" },
+            { label: "City & State", name: "location", placeholder: "City, State" },
+          ].map(f => (
+            <div key={f.name} style={fieldStyle}>
+              <label style={labelStyle}>{f.label}</label>
+              <input
+                name={f.name}
+                value={(form as any)[f.name]}
+                onChange={handleChange}
+                placeholder={f.placeholder}
+                style={inputStyle}
+              />
+            </div>
+          ))}
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>How long have you been in business?</label>
+          <select name="yearsInBusiness" value={form.yearsInBusiness} onChange={handleChange} style={inputStyle}>
+            <option value="">Select one</option>
+            <option>Less than 1 year</option>
+            <option>1–3 years</option>
+            <option>3–5 years</option>
+            <option>5+ years</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Branding */}
+      <div style={groupStyle}>
+        <div style={sectionLabelStyle}>Branding</div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+          <div style={fieldStyle}>
+            <label style={labelStyle}>Do you have a logo?</label>
+            <select name="hasLogo" value={form.hasLogo} onChange={handleChange} style={inputStyle}>
+              <option value="">Select one</option>
+              <option>Yes — I'll send it over</option>
+              <option>No — I need one</option>
+              <option>I have something rough</option>
+            </select>
+          </div>
+          <div style={fieldStyle}>
+            <label style={labelStyle}>Do you have an existing website?</label>
+            <select name="existingSite" value={form.existingSite} onChange={handleChange} style={inputStyle}>
+              <option value="">Select one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+        </div>
+        {form.existingSite === "Yes" && (
+          <div style={fieldStyle}>
+            <label style={labelStyle}>Existing Website URL</label>
+            <input
+              name="existingSiteUrl"
+              value={form.existingSiteUrl}
+              onChange={handleChange}
+              placeholder="https://yoursite.com"
+              style={inputStyle}
+            />
+          </div>
+        )}
+        <div style={fieldStyle}>
+          <label style={labelStyle}>Brand colors (if you have them)</label>
+          <input
+            name="brandColors"
+            value={form.brandColors}
+            onChange={handleChange}
+            placeholder="e.g. Navy blue and white, or 'no idea yet'"
+            style={inputStyle}
+          />
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>How would you describe the feel you want your website to have?</label>
+          <textarea
+            name="brandFeel"
+            value={form.brandFeel}
+            onChange={handleChange}
+            placeholder="e.g. Clean and professional, friendly and approachable, bold and modern..."
+            rows={3}
+            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+          />
+        </div>
+      </div>
+
+      {/* Goals */}
+      <div style={groupStyle}>
+        <div style={sectionLabelStyle}>Goals</div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>What is the primary goal of your website?</label>
+          <select name="primaryGoal" value={form.primaryGoal} onChange={handleChange} style={inputStyle}>
+            <option value="">Select one</option>
+            <option>Generate leads / get more calls</option>
+            <option>Sell products online</option>
+            <option>Build credibility and look professional</option>
+            <option>Replace an outdated site</option>
+            <option>All of the above</option>
+          </select>
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>Who is your ideal customer?</label>
+          <textarea
+            name="targetAudience"
+            value={form.targetAudience}
+            onChange={handleChange}
+            placeholder="e.g. Homeowners in the Dayton area, ages 30–55, busy professionals..."
+            rows={3}
+            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+          />
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>Any competitors or sites you admire? (links welcome)</label>
+          <textarea
+            name="competitors"
+            value={form.competitors}
+            onChange={handleChange}
+            placeholder="e.g. 'I like how cleaningco.com looks' or 'nothing in particular'"
+            rows={3}
+            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+          />
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>What does success look like 6 months from now?</label>
+          <textarea
+            name="successLookLike"
+            value={form.successLookLike}
+            onChange={handleChange}
+            placeholder="e.g. More booked appointments, a site I'm proud to show people, leads coming in without me chasing them..."
+            rows={3}
+            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+          />
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>What's your ideal timeline to launch?</label>
+          <select name="timeline" value={form.timeline} onChange={handleChange} style={inputStyle}>
+            <option value="">Select one</option>
+            <option>As soon as possible</option>
+            <option>Within 30 days</option>
+            <option>Within 60 days</option>
+            <option>No hard deadline</option>
+          </select>
+        </div>
+        <div style={fieldStyle}>
+          <label style={labelStyle}>Anything else I should know?</label>
+          <textarea
+            name="additionalNotes"
+            value={form.additionalNotes}
+            onChange={handleChange}
+            placeholder="Anything at all — context helps."
+            rows={4}
+            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+          />
+        </div>
+      </div>
+
+      {status === "error" && (
+        <div style={{ fontSize: "12px", color: "#8a3a3a", fontFamily: "'Courier New', monospace" }}>
+          Something went wrong. Please try again or email rodactual@proton.me directly.
+        </div>
+      )}
+
+      <button
+        onClick={handleSubmit}
+        disabled={status === "submitting"}
+        style={{
+          alignSelf: "flex-start",
+          background: status === "submitting" ? "transparent" : "#c8a96e",
+          border: "1px solid #c8a96e",
+          borderRadius: "3px",
+          padding: "12px 28px",
+          color: status === "submitting" ? "#c8a96e" : "#0a0908",
+          fontFamily: "'Courier New', monospace",
+          fontSize: "11px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          cursor: status === "submitting" ? "not-allowed" : "pointer",
+          transition: "all 0.15s ease",
+        }}
+      >
+        {status === "submitting" ? "Sending..." : "Submit Questionnaire"}
+      </button>
+    </div>
+  );
+}
+
 export default function BusinessPlan() {
   const [active, setActive] = useState(SECTIONS[0]);
 
@@ -419,7 +769,7 @@ export default function BusinessPlan() {
               letterSpacing: "-0.01em",
               color: "#e8e0d0",
               lineHeight: "1.2",
-            }}>Anthony Rodriguez - Digital Operations Consultant</h1>
+            }}>Rodriguez Digital Operations, LLC.</h1>
             <div style={{ color: "#5a5248", fontSize: "13px", marginTop: "4px", fontStyle: "italic" }}>
               Building secure, scalable systems for service businesses.
             </div>
@@ -483,7 +833,11 @@ export default function BusinessPlan() {
               {active}
             </h2>
           </div>
-          <SectionContent content={data[active].content} />
+          {active === "Client Questionnaire" ? (
+  <ClientQuestionnaire />
+) : (
+  <SectionContent content={data[active].content} />
+)}
         </div>
       </div>
 
@@ -496,10 +850,7 @@ export default function BusinessPlan() {
         alignItems: "center",
       }}>
         <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#2a2520" }}>
-          © 2026 Digital Operations Architecture
-        </div>
-        <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#2a2520" }}>
-          Powered by Proton Workspace
+          © 2026 Rodriguez Digital Operations, LLC. All rights reserved.
         </div>
       </div>
     </div>
