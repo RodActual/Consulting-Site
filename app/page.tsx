@@ -65,7 +65,7 @@ const data: OperatingSystemData = {
     { type: "section-title", text: "How I Operate Behind The Scenes" },
     { 
       type: "intro", 
-      text: "This is the infrastructure I run my practice on — not billed to you, not negotiable. Every client I work with benefits from a consultant who operates on a private, organized, and accountable foundation." 
+      text: "This is the infrastructure I run my practice on. Not billed to you, not negotiable. Every client I work with benefits from a consultant who operates on a private, organized, and accountable foundation." 
     },
     {
       type: "table",
@@ -73,7 +73,7 @@ const data: OperatingSystemData = {
       rows: [
         [
           "Encrypted Communication & Storage",
-          "Your files, emails, and shared documents live in Proton Drive — not a personal Gmail or a free Dropbox. Everything is end-to-end encrypted by default."
+          "Your files, emails, and shared documents live in Proton Drive, not a personal Gmail or a free Dropbox. Everything is end-to-end encrypted by default."
         ],
         [
           "Secure Password Management",
@@ -85,7 +85,7 @@ const data: OperatingSystemData = {
         ],
         [
           "Honest Time Tracking",
-          "Every hour worked is logged in Toggl Track in real time. Your monthly report reflects actual time spent — not an estimate."
+          "Every hour worked is logged in Toggl Track in real time. Your monthly report reflects actual time spent, not an estimate."
         ],
       ],
     },
@@ -101,7 +101,7 @@ const data: OperatingSystemData = {
     { type: "section-title", text: "Monthly Plans" },
     {
   type: "intro",
-  text: "All plans are month-to-month. No contracts, no lock-in. Pick what fits your business now — you can always add more later. Clients can move between plans at any time with 30 days written notice.",
+  text: "All plans are month-to-month. No contracts, no lock-in. Pick what fits your business now, you can always add more later. Clients can move between plans at any time with 30 days written notice.",
 },
     {
       type: "tiers",
@@ -125,7 +125,7 @@ const data: OperatingSystemData = {
             "Ongoing updates and content changes",
             "Security monitoring and uptime checks",
             "Google Business Profile optimization",
-            "Local SEO — show up when people search for what you do",
+            "Local SEO: show up when people search for what you do",
             "Monthly performance check-in",
           ],
           note: "For businesses that want a professional web presence that actually gets found. Any additional site or SEO work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
@@ -150,7 +150,7 @@ const data: OperatingSystemData = {
             "Monthly email marketing campaign",
             "Social media content and scheduling (up to 2 platforms)",
             "Unified monthly report across all channels",
-            "Priority response — within 2 business hours",
+            "Priority response - within 2 business hours",
           ],
           note: "For businesses that want everything handled in one place by one person. Any services requested outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
         },
@@ -160,8 +160,8 @@ const data: OperatingSystemData = {
     {
       type: "simple-list",
       items: [
-        "Website Build (No Maintenance): $500 — A clean, professional site built and handed off fully to you. No ongoing commitment.",
-        "Platform Migration & Takeover Setup: $250 — Paid once before work begins. Covers account access, audit, and initial setup. Followed by your choice of Site, Maintenance & SEO ($750/mo) or Site, Maintenance, SEO & Ads ($1,000/mo).",
+        "Website Build (No Maintenance): $500 - A clean, professional site built and handed off fully to you. No ongoing commitment.",
+        "Platform Migration & Takeover Setup: $250 - Paid once before work begins. Covers account access, audit, and initial setup. Followed by your choice of Site, Maintenance & SEO ($750/mo) or Site, Maintenance, SEO & Ads ($1,000/mo).",
       ],
     },
     { type: "section-title", text: "Not Sure Which Fits?" },
@@ -181,7 +181,7 @@ const data: OperatingSystemData = {
     { type: "section-title", text: "How I Work" },
     {
       type: "intro",
-      text: "I keep my client list small on purpose. Every business I work with gets my direct attention — not a ticketing system, not a shared inbox, not someone I delegated it to. That only works if I'm not stretched thin.",
+      text: "I keep my client list small on purpose. Every business I work with gets my direct attention: not a ticketing system, not a shared inbox, not someone I delegated it to. That only works if I'm not stretched thin.",
     },
     {
       type: "profile",
@@ -189,13 +189,13 @@ const data: OperatingSystemData = {
         { label: "Active Clients", value: "4–5 at any given time. When I'm full, I'm full." },
         { label: "New Projects", value: "One new website build per month during peak season." },
         { label: "Onboarding", value: "Every new client goes through a 30-day ramp-up so nothing gets missed and nothing gets rushed." },
-        { label: "Off-boarding", value: "If we part ways, you leave with everything — full credential handoff within 5 business days, no hassle." },
+        { label: "Off-boarding", value: "If we part ways, you leave with everything. Full credential handoff within 5 business days, no hassle." },
       ],
     },
     { type: "section-title", text: "What Onboarding Looks Like" },
     {
       type: "intro",
-      text: "The first 30 days aren't billable chaos — they follow a defined process so you know exactly what's happening and when.",
+      text: "The first 30 days aren't billable chaos; they follow a defined process so you know exactly what's happening and when.",
     },
     {
       type: "checklist",
@@ -220,22 +220,22 @@ const data: OperatingSystemData = {
     { type: "section-title", text: "Who You're Working With" },
     {
       type: "intro",
-      text: "I'm Anthony Rodriguez — a solo digital operations consultant based in Dayton, Ohio. Before building this practice, I spent six years in the U.S. Army as a Squad Leader and another three years deploying enterprise CRM systems for one of the largest automotive software companies in the country. I know what it means to be accountable for a system that has to work.",
+      text: "I'm Anthony Rodriguez, a solo digital operations consultant based in Dayton, Ohio. Before building this practice, I spent six years in the U.S. Army as a Squad Leader and another three years deploying enterprise CRM systems for one of the largest automotive software companies in the country. I know what it means to be accountable for a system that has to work.",
     },
     {
       type: "profile",
       items: [
         { label: "Focus", value: "Website management, digital operations, and ad strategy for small service businesses." },
-       { label: "Background", value: "U.S. Army Combat Engineer (Squad Leader), CRM Implementation Specialist at Reynolds & Reynolds, and B.S. Cybersecurity & Networking graduate from Miami University — GPA 3.94." },
-        { label: "Clearance", value: "U.S. Government Secret Clearance — inactive, eligible for reinstatement." },
-        { label: "Approach", value: "Solo and intentional. I cap my client roster so every business I work with gets my full attention — not a junior employee's." },
-        { label: "Location", value: "Dayton, Ohio — available remotely." },
+       { label: "Background", value: "U.S. Army Combat Engineer (Squad Leader), CRM Implementation Specialist at Reynolds & Reynolds, and B.S. Cybersecurity & Networking graduate from Miami University." },
+        { label: "Clearance", value: "U.S. Government Secret Clearance (inactive, eligible for reinstatement)." },
+        { label: "Approach", value: "Solo and intentional. I cap my client roster so every business I work with gets my full attention, not a junior employee's." },
+        { label: "Location", value: "Dayton, Ohio - available remotely." },
         { label: "Response Time", value: "Non-urgent requests within 1 business day. Site emergencies within 4 business hours." },
       ],
     },
     {
       type: "highlight",
-      text: "I started this practice because most small businesses don't need an agency — they need one person who knows what they're doing and actually shows up.",
+      text: "I started this practice because most small businesses don't need an agency, they need one person who knows what they're doing and actually shows up.",
     },
   ],
 },
@@ -404,7 +404,7 @@ function TierIntakeForm({ tierName, onClose }: { tierName: string; onClose: () =
         INQUIRY RECEIVED
       </div>
       <div style={{ fontFamily: "'Georgia', serif", fontSize: "15px", color: "#d0c8b8", marginBottom: "6px" }}>
-        Thanks — I'll be in touch within one business day.
+        Thanks, I'll be in touch within one business day.
       </div>
       <div style={{ fontSize: "12px", color: "#5a5248" }}>
         Your interest in <span style={{ color: "#c8a96e" }}>{tierName}</span> has been noted.
@@ -505,7 +505,7 @@ function TierIntakeForm({ tierName, onClose }: { tierName: string; onClose: () =
           name="additionalNotes"
           value={form.additionalNotes}
           onChange={handleChange}
-          placeholder="Any context, questions, or concerns — all of it helps."
+          placeholder="Any context, questions, or concerns. All of it helps."
           rows={3}
           style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
         />
@@ -770,7 +770,7 @@ function ClientQuestionnaire() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           ...form,
-          _subject: `New Discovery Questionnaire — ${form.businessName}`,
+          _subject: `New Discovery Questionnaire - ${form.businessName}`,
         }),
       });
       if (res.ok) setStatus("success");
@@ -840,7 +840,7 @@ function ClientQuestionnaire() {
         QUESTIONNAIRE RECEIVED
       </div>
       <div style={{ fontFamily: "'Georgia', serif", fontSize: "16px", color: "#d0c8b8", marginBottom: "8px" }}>
-        Thank you — I'll be in touch within one business day.
+        Thank you, I'll be in touch within one business day.
       </div>
       <div style={{ fontSize: "12px", color: "#5a5248" }}>
         A copy of your responses has been sent to rodactual@proton.me
@@ -851,7 +851,7 @@ function ClientQuestionnaire() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
       <p style={{ color: "#b0a898", fontSize: "14px", lineHeight: "1.8", margin: 0 }}>
-        Fill this out as completely as you can. There are no wrong answers — this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
+        Fill this out as completely as you can. There are no wrong answers, this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
       </p>
 
       {/* Business Basics */}
@@ -898,8 +898,8 @@ function ClientQuestionnaire() {
             <label style={labelStyle}>Do you have a logo?</label>
             <select name="hasLogo" value={form.hasLogo} onChange={handleChange} style={inputStyle}>
               <option value="">Select one</option>
-              <option>Yes — I'll send it over</option>
-              <option>No — I need one</option>
+              <option>Yes,m I'll send it over</option>
+              <option>No, I need one</option>
               <option>I have something rough</option>
             </select>
           </div>
@@ -1010,7 +1010,7 @@ function ClientQuestionnaire() {
             name="additionalNotes"
             value={form.additionalNotes}
             onChange={handleChange}
-            placeholder="Anything at all — context helps."
+            placeholder="Anything at all, context helps."
             rows={4}
             style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
           />
