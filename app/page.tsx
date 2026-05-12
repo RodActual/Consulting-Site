@@ -98,56 +98,80 @@ const data: OperatingSystemData = {
 "What I Offer": {
   icon: "◈",
   content: [
-    { type: "section-title", text: "Monthly Retainers" },
+    { type: "section-title", text: "Monthly Plans" },
+    {
+  type: "intro",
+  text: "All plans are month-to-month. No contracts, no lock-in. Pick what fits your business now — you can always add more later. Clients can move between plans at any time with 30 days written notice.",
+},
     {
       type: "tiers",
       items: [
         {
-          name: "Site & Maintenance",
+          name: "Email Marketing",
+          price: "$300/mo",
+          features: [
+            "Monthly newsletter or promotional email campaign",
+            "List management and segmentation",
+            "Performance reporting (opens, clicks, unsubscribes)",
+            "Campaign copywriting and layout",
+          ],
+          note: "For businesses with an existing customer list that want to stay top of mind without lifting a finger. Any additional email services outside this scope will be quoted and added to your monthly rate.",
+        },
+        {
+          name: "Site, Maintenance & SEO",
           price: "$750/mo",
           features: [
             "Custom website built for your business",
             "Ongoing updates and content changes",
             "Security monitoring and uptime checks",
+            "Google Business Profile optimization",
+            "Local SEO — show up when people search for what you do",
             "Monthly performance check-in",
           ],
-          note: "For businesses that want a professional web presence without the headache of managing it themselves.",
+          note: "For businesses that want a professional web presence that actually gets found. Any additional site or SEO work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
         },
         {
-          name: "Site, Maintenance & Ads",
+          name: "Site, Maintenance, SEO & Ads",
           price: "$1,000/mo",
           features: [
-            "Everything in Site & Maintenance",
+            "Everything in Site, Maintenance & SEO",
             "Ad campaign setup and management (Meta or Google)",
             "Daily budget monitoring and ad creative refreshes",
             "Monthly ad performance report",
           ],
-          note: "For businesses ready to actively bring in new leads alongside a maintained web presence.",
+          note: "For businesses ready to actively bring in new leads alongside a maintained, visible web presence. Any additional ad or site work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
           highlight: true,
         },
         {
-          name: "Takeover & Cleanup",
-          price: "$750/mo",
+          name: "Full Digital Management",
+          price: "$1,500/mo",
           features: [
-            "Full takeover of your existing website",
-            "30-day cleanup: outdated content, broken links, speed issues",
-            "Hosting migration if needed",
-            "Ongoing maintenance after cleanup is complete",
+            "Everything in Site, Maintenance, SEO & Ads",
+            "Monthly email marketing campaign",
+            "Social media content and scheduling (up to 2 platforms)",
+            "Unified monthly report across all channels",
+            "Priority response — within 2 business hours",
           ],
-          note: "First 30 days billed at $900/mo to cover the cleanup workload. Drops to $750/mo once the site is in good shape.",
+          note: "For businesses that want everything handled in one place by one person. Any services requested outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
         },
       ],
     },
-    { type: "section-title", text: "One-Time Builds" },
+    { type: "section-title", text: "One-Time Fees" },
     {
       type: "simple-list",
       items: [
-        "Website Build (No Maintenance): $500 — A clean, professional site handed off fully to you.",
+        "Website Build (No Maintenance): $500 — A clean, professional site built and handed off fully to you. No ongoing commitment.",
+        "Platform Migration & Takeover Setup: $250 — Paid once before work begins. Covers account access, audit, and initial setup. Followed by your choice of Site, Maintenance & SEO ($750/mo) or Site, Maintenance, SEO & Ads ($1,000/mo).",
       ],
+    },
+    { type: "section-title", text: "Not Sure Which Fits?" },
+    {
+      type: "intro",
+      text: "Every engagement starts with a free discovery call. Fill out the questionnaire in the Client Questionnaire section and I'll reach out within one business day to talk through what makes sense for your business.",
     },
     {
       type: "highlight",
-      text: "Not sure which fits? Every engagement starts with a free conversation to figure out what your business actually needs.",
+      text: "You're not committing to anything by reaching out. The first conversation is always free.",
     },
   ],
 },
@@ -224,18 +248,23 @@ const data: OperatingSystemData = {
 
 // --- Components ---
 
-function TierCard({ item }: { item: TierItem }) {
+function TierCard({ item, selected, onSelect }: { 
+  item: TierItem; 
+  selected: boolean; 
+  onSelect: () => void;
+}) {
   return (
     <div style={{
-      border: item.highlight ? "2px solid #c8a96e" : "1px solid #2a2a2a",
+      border: selected ? "2px solid #c8a96e" : item.highlight ? "2px solid #c8a96e" : "1px solid #2a2a2a",
       borderRadius: "4px",
       padding: "20px",
-      background: item.highlight ? "rgba(200,169,110,0.06)" : "rgba(255,255,255,0.02)",
+      background: selected ? "rgba(200,169,110,0.10)" : item.highlight ? "rgba(200,169,110,0.06)" : "rgba(255,255,255,0.02)",
       position: "relative",
       flex: "1",
       minWidth: "200px",
+      transition: "all 0.15s ease",
     }}>
-      {item.highlight && (
+      {item.highlight && !selected && (
         <div style={{
           position: "absolute",
           top: "-11px",
@@ -247,7 +276,21 @@ function TierCard({ item }: { item: TierItem }) {
           letterSpacing: "0.12em",
           padding: "2px 10px",
           fontFamily: "'Courier New', monospace",
-        }}>CORE SYSTEM</div>
+        }}>MOST POPULAR</div>
+      )}
+      {selected && (
+        <div style={{
+          position: "absolute",
+          top: "-11px",
+          left: "20px",
+          background: "#c8a96e",
+          color: "#0a0a0a",
+          fontSize: "10px",
+          fontWeight: "700",
+          letterSpacing: "0.12em",
+          padding: "2px 10px",
+          fontFamily: "'Courier New', monospace",
+        }}>SELECTED</div>
       )}
       <div style={{ fontFamily: "'Georgia', serif", fontSize: "16px", color: "#e8e0d0", marginBottom: "8px" }}>
         {item.name}
@@ -266,6 +309,251 @@ function TierCard({ item }: { item: TierItem }) {
           {item.note}
         </div>
       )}
+      <button
+        onClick={onSelect}
+        style={{
+          marginTop: "20px",
+          width: "100%",
+          padding: "9px 0",
+          background: selected ? "#c8a96e" : "transparent",
+          border: "1px solid #c8a96e",
+          borderRadius: "3px",
+          color: selected ? "#0a0908" : "#c8a96e",
+          fontFamily: "'Courier New', monospace",
+          fontSize: "10px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          cursor: "pointer",
+          transition: "all 0.15s ease",
+        }}
+      >
+        {selected ? "✓ Selected" : "Select This Plan"}
+      </button>
+    </div>
+  );
+}
+
+function TierIntakeForm({ tierName, onClose }: { tierName: string; onClose: () => void }) {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [form, setForm] = useState({
+    name: "",
+    businessName: "",
+    email: "",
+    phone: "",
+    currentSituation: "",
+    timeline: "",
+    additionalNotes: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async () => {
+    setStatus("submitting");
+    try {
+      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          ...form,
+          selectedTier: tierName,
+          _subject: `New Inquiry — ${tierName} — ${form.businessName}`,
+        }),
+      });
+      if (res.ok) setStatus("success");
+      else setStatus("error");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const inputStyle: React.CSSProperties = {
+    width: "100%",
+    background: "rgba(255,255,255,0.03)",
+    border: "1px solid #2a2520",
+    borderRadius: "3px",
+    padding: "10px 14px",
+    color: "#d0c8b8",
+    fontSize: "13px",
+    fontFamily: "'Georgia', serif",
+    outline: "none",
+    boxSizing: "border-box",
+  };
+
+  const labelStyle: React.CSSProperties = {
+    fontFamily: "'Courier New', monospace",
+    fontSize: "10px",
+    letterSpacing: "0.12em",
+    color: "#5a5248",
+    textTransform: "uppercase",
+    display: "block",
+    marginBottom: "6px",
+  };
+
+  if (status === "success") return (
+    <div style={{
+      border: "1px solid #2a4a2a",
+      borderRadius: "4px",
+      padding: "32px",
+      textAlign: "center",
+      background: "rgba(42,74,42,0.06)",
+      marginTop: "24px",
+    }}>
+      <div style={{ fontFamily: "'Courier New', monospace", fontSize: "11px", color: "#4a8a4a", letterSpacing: "0.15em", marginBottom: "10px" }}>
+        INQUIRY RECEIVED
+      </div>
+      <div style={{ fontFamily: "'Georgia', serif", fontSize: "15px", color: "#d0c8b8", marginBottom: "6px" }}>
+        Thanks — I'll be in touch within one business day.
+      </div>
+      <div style={{ fontSize: "12px", color: "#5a5248" }}>
+        Your interest in <span style={{ color: "#c8a96e" }}>{tierName}</span> has been noted.
+      </div>
+    </div>
+  );
+
+  return (
+    <div style={{
+      marginTop: "24px",
+      border: "1px solid #2a2520",
+      borderRadius: "4px",
+      padding: "28px",
+      background: "rgba(255,255,255,0.015)",
+      display: "flex",
+      flexDirection: "column",
+      gap: "20px",
+    }}>
+      {/* Header */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+        <div>
+          <div style={{
+            fontFamily: "'Courier New', monospace",
+            fontSize: "10px",
+            letterSpacing: "0.15em",
+            color: "#5a5248",
+            textTransform: "uppercase",
+            marginBottom: "4px",
+          }}>Getting Started With</div>
+          <div style={{ fontFamily: "'Georgia', serif", fontSize: "18px", color: "#c8a96e" }}>
+            {tierName}
+          </div>
+        </div>
+        <button
+          onClick={onClose}
+          style={{
+            background: "transparent",
+            border: "none",
+            color: "#3a3530",
+            cursor: "pointer",
+            fontSize: "18px",
+            padding: "0",
+            lineHeight: "1",
+          }}
+        >✕</button>
+      </div>
+
+      <p style={{ margin: 0, fontSize: "13px", color: "#7a7268", lineHeight: "1.7" }}>
+        Fill this out and I'll reach out within one business day to talk through next steps. No commitment required.
+      </p>
+
+      {/* Fields */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+        <div>
+          <label style={labelStyle}>Your Name</label>
+          <input name="name" value={form.name} onChange={handleChange} placeholder="First Last" style={inputStyle} />
+        </div>
+        <div>
+          <label style={labelStyle}>Business Name</label>
+          <input name="businessName" value={form.businessName} onChange={handleChange} placeholder="Business Name" style={inputStyle} />
+        </div>
+        <div>
+          <label style={labelStyle}>Email Address</label>
+          <input name="email" value={form.email} onChange={handleChange} placeholder="you@yourbusiness.com" style={inputStyle} />
+        </div>
+        <div>
+          <label style={labelStyle}>Phone Number</label>
+          <input name="phone" value={form.phone} onChange={handleChange} placeholder="(555) 000-0000" style={inputStyle} />
+        </div>
+      </div>
+
+      <div>
+        <label style={labelStyle}>Where are you at right now digitally?</label>
+        <textarea
+          name="currentSituation"
+          value={form.currentSituation}
+          onChange={handleChange}
+          placeholder="e.g. No website yet, have an old one that needs work, running ads but not seeing results..."
+          rows={3}
+          style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+        />
+      </div>
+
+      <div>
+        <label style={labelStyle}>What's your ideal timeline to get started?</label>
+        <select name="timeline" value={form.timeline} onChange={handleChange} style={inputStyle}>
+          <option value="">Select one</option>
+          <option>As soon as possible</option>
+          <option>Within 30 days</option>
+          <option>Within 60 days</option>
+          <option>No hard deadline</option>
+        </select>
+      </div>
+
+      <div>
+        <label style={labelStyle}>Anything else I should know?</label>
+        <textarea
+          name="additionalNotes"
+          value={form.additionalNotes}
+          onChange={handleChange}
+          placeholder="Any context, questions, or concerns — all of it helps."
+          rows={3}
+          style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+        />
+      </div>
+
+      {status === "error" && (
+        <div style={{ fontSize: "12px", color: "#8a3a3a", fontFamily: "'Courier New', monospace" }}>
+          Something went wrong. Please try again or email rodactual@proton.me directly.
+        </div>
+      )}
+
+      <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+        <button
+          onClick={handleSubmit}
+          disabled={status === "submitting"}
+          style={{
+            background: status === "submitting" ? "transparent" : "#c8a96e",
+            border: "1px solid #c8a96e",
+            borderRadius: "3px",
+            padding: "11px 28px",
+            color: status === "submitting" ? "#c8a96e" : "#0a0908",
+            fontFamily: "'Courier New', monospace",
+            fontSize: "11px",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            cursor: status === "submitting" ? "not-allowed" : "pointer",
+            transition: "all 0.15s ease",
+          }}
+        >
+          {status === "submitting" ? "Sending..." : "Send Inquiry"}
+        </button>
+        <button
+          onClick={onClose}
+          style={{
+            background: "transparent",
+            border: "none",
+            color: "#5a5248",
+            fontFamily: "'Courier New', monospace",
+            fontSize: "10px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            cursor: "pointer",
+            padding: "0",
+          }}
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 }
@@ -290,6 +578,33 @@ function Flywheel({ steps }: { steps: string[] }) {
         </React.Fragment>
       ))}
       <span style={{ color: "#3a3530", fontSize: "16px" }}>→ ↺</span>
+    </div>
+  );
+}
+
+function TiersBlock({ items }: { items: TierItem[] }) {
+  const [selectedTier, setSelectedTier] = useState<string | null>(null);
+
+  return (
+    <div>
+      <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+        {items.map((item, j) => (
+          <TierCard
+            key={j}
+            item={item}
+            selected={selectedTier === item.name}
+            onSelect={() => setSelectedTier(
+              selectedTier === item.name ? null : item.name
+            )}
+          />
+        ))}
+      </div>
+      {selectedTier && (
+        <TierIntakeForm
+          tierName={selectedTier}
+          onClose={() => setSelectedTier(null)}
+        />
+      )}
     </div>
   );
 }
@@ -373,9 +688,7 @@ function SectionContent({ content }: { content: ContentBlock[] }) {
           </div>
         );
         if (block.type === "tiers") return (
-          <div key={i} style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            {block.items?.map((item, j) => <TierCard key={j} item={item as TierItem} />)}
-          </div>
+          <TiersBlock key={i} items={block.items as TierItem[]} />
         );
         if (block.type === "simple-list") return (
           <ul key={i} style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "8px" }}>
