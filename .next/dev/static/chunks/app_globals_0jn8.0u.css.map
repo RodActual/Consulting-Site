@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Projects/ConsultingSite/app/globals.css"],"sourcesContent":["*, *::before, *::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml, body {\r\n  margin: 0;\r\n  padding: 0;\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\n@media (max-width: 640px) {\r\n  .mobile-menu-bar {\r\n    display: block !important;\r\n  }\r\n\r\n  .sidebar {\r\n    width: 100% !important;\r\n    border-right: none !important;\r\n    border-bottom: 1px solid #1e1c1a;\r\n    padding: 0 !important;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: 100;\r\n    background: #0a0908 !important;\r\n  }\r\n\r\n  /* Hide sidebar on mobile unless menu is open */\r\n  .sidebar.closed {\r\n    display: none !important;\r\n  }\r\n\r\n  .main-layout {\r\n    flex-direction: column !important;\r\n  }\r\n\r\n  .main-content {\r\n    padding: 24px 20px !important;\r\n  }\r\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;AAKA;EACE;;;;EAIA;;;;;;;;;;;;EAaA;;;;EAIA;;;;EAIA"}}]
-}
