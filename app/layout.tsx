@@ -5,7 +5,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Rodriguez Digital Operations, LLC. | Fractional Consultant",
+  title: "Rodriguez Digital Operations, LLC.",
   description: "I build secure, scalable digital operating systems for service businesses. Replace chaotic tools with a unified, encrypted infrastructure.",
   keywords: ["digital operations", "fractional consultant", "business systems", "secure infrastructure", "service business"],
   authors: [{ name: "Anthony Rodriguez" }],

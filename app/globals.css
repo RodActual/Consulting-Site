@@ -12,3 +12,34 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media (max-width: 640px) {
+  .mobile-menu-bar {
+    display: block !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #1e1c1a;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #0a0908 !important;
+  }
+
+  /* Hide sidebar on mobile unless menu is open */
+  .sidebar.closed {
+    display: none !important;
+  }
+
+  .main-layout {
+    flex-direction: column !important;
+  }
+
+  .main-content {
+    padding: 24px 20px !important;
+  }
+}

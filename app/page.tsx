@@ -14,7 +14,7 @@ interface TierItem {
 interface ContentBlock {
   type: "intro" | "pillars" | "highlight" | "section-title" | "table" | "tiers" | "simple-list" | "profile" | "flywheel" | "checklist";
   text?: string;
-  items?: any[]; // Kept loose for mixed array types (pillars, profiles, lists), but can be strictly typed further.
+  items?: any[];
   headers?: string[];
   rows?: string[][];
   steps?: string[];
@@ -59,187 +59,187 @@ const data: OperatingSystemData = {
       },
     ],
   },
-"The Digital Foundation": {
-  icon: "◈",
-  content: [
-    { type: "section-title", text: "How I Operate Behind The Scenes" },
-    { 
-      type: "intro", 
-      text: "This is the infrastructure I run my practice on. Not billed to you, not negotiable. Every client I work with benefits from a consultant who operates on a private, organized, and accountable foundation." 
-    },
-    {
-      type: "table",
-      headers: ["What It Is", "What It Means For You"],
-      rows: [
-        [
-          "Encrypted Communication & Storage",
-          "Your files, emails, and shared documents live in Proton Drive, not a personal Gmail or a free Dropbox. Everything is end-to-end encrypted by default."
-        ],
-        [
-          "Secure Password Management",
-          "Every login, credential, and access key related to your accounts is stored in Proton Pass. No sticky notes, no texting passwords, no shared spreadsheets."
-        ],
-        [
-          "Clean Invoicing & Billing",
-          "All invoices and payments run through Found, a dedicated business account. You always have a clear record of what was billed and when."
-        ],
-        [
-          "Honest Time Tracking",
-          "Every hour worked is logged in Toggl Track in real time. Your monthly report reflects actual time spent, not an estimate."
-        ],
-      ],
-    },
-    { 
-      type: "highlight", 
-      text: "These are my standards, not your deliverables. You benefit from them because I refuse to work any other way." 
-    },
-  ],
-},
-"What I Offer": {
-  icon: "◈",
-  content: [
-    { type: "section-title", text: "Monthly Plans" },
-    {
-  type: "intro",
-  text: "All plans are month-to-month. No contracts, no lock-in. Pick what fits your business now, you can always add more later. Clients can move between plans at any time with 30 days written notice.",
-},
-    {
-      type: "tiers",
-      items: [
-        {
-          name: "Email Marketing",
-          price: "$300/mo",
-          features: [
-            "Monthly newsletter or promotional email campaign",
-            "List management and segmentation",
-            "Performance reporting (opens, clicks, unsubscribes)",
-            "Campaign copywriting and layout",
+  "The Digital Foundation": {
+    icon: "◈",
+    content: [
+      { type: "section-title", text: "How I Operate Behind The Scenes" },
+      {
+        type: "intro",
+        text: "This is the infrastructure I run my practice on. Not billed to you, not negotiable. Every client I work with benefits from a consultant who operates on a private, organized, and accountable foundation.",
+      },
+      {
+        type: "table",
+        headers: ["What It Is", "What It Means For You"],
+        rows: [
+          [
+            "Encrypted Communication & Storage",
+            "Your files, emails, and shared documents live in Proton Drive, not a personal Gmail or a free Dropbox. Everything is end-to-end encrypted by default.",
           ],
-          note: "For businesses with an existing customer list that want to stay top of mind without lifting a finger. Any additional email services outside this scope will be quoted and added to your monthly rate.",
-        },
-        {
-          name: "Site, Maintenance & SEO",
-          price: "$750/mo",
-          features: [
-            "Custom website built for your business",
-            "Ongoing updates and content changes",
-            "Security monitoring and uptime checks",
-            "Google Business Profile optimization",
-            "Local SEO: show up when people search for what you do",
-            "Monthly performance check-in",
+          [
+            "Secure Password Management",
+            "Every login, credential, and access key related to your accounts is stored in Proton Pass. No sticky notes, no texting passwords, no shared spreadsheets.",
           ],
-          note: "For businesses that want a professional web presence that actually gets found. Any additional site or SEO work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
-        },
-        {
-          name: "Site, Maintenance, SEO & Ads",
-          price: "$1,000/mo",
-          features: [
-            "Everything in Site, Maintenance & SEO",
-            "Ad campaign setup and management (Meta or Google)",
-            "Daily budget monitoring and ad creative refreshes",
-            "Monthly ad performance report",
+          [
+            "Clean Invoicing & Billing",
+            "All invoices and payments run through Found, a dedicated business account. You always have a clear record of what was billed and when.",
           ],
-          note: "For businesses ready to actively bring in new leads alongside a maintained, visible web presence. Any additional ad or site work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
-          highlight: true,
-        },
-        {
-          name: "Full Digital Management",
-          price: "$1,500/mo",
-          features: [
-            "Everything in Site, Maintenance, SEO & Ads",
-            "Monthly email marketing campaign",
-            "Social media content and scheduling (up to 2 platforms)",
-            "Unified monthly report across all channels",
-            "Priority response - within 2 business hours",
+          [
+            "Honest Time Tracking",
+            "Every hour worked is logged in Toggl Track in real time. Your monthly report reflects actual time spent, not an estimate.",
           ],
-          note: "For businesses that want everything handled in one place by one person. Any services requested outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
-        },
-      ],
-    },
-    { type: "section-title", text: "One-Time Fees" },
-    {
-      type: "simple-list",
-      items: [
-        "Website Build (No Maintenance): $500 - A clean, professional site built and handed off fully to you. No ongoing commitment.",
-        "Platform Migration & Takeover Setup: $250 - Paid once before work begins. Covers account access, audit, and initial setup. Followed by your choice of Site, Maintenance & SEO ($750/mo) or Site, Maintenance, SEO & Ads ($1,000/mo).",
-      ],
-    },
-    { type: "section-title", text: "Not Sure Which Fits?" },
-    {
-      type: "intro",
-      text: "Every engagement starts with a free discovery call. Fill out the questionnaire in the Client Questionnaire section and I'll reach out within one business day to talk through what makes sense for your business.",
-    },
-    {
-      type: "highlight",
-      text: "You're not committing to anything by reaching out. The first conversation is always free.",
-    },
-  ],
-},
+        ],
+      },
+      {
+        type: "highlight",
+        text: "These are my standards, not your deliverables. You benefit from them because I refuse to work any other way.",
+      },
+    ],
+  },
+  "What I Offer": {
+    icon: "◈",
+    content: [
+      { type: "section-title", text: "Monthly Plans" },
+      {
+        type: "intro",
+        text: "All plans are month-to-month. No contracts, no lock-in. Pick what fits your business now, you can always add more later. Clients can move between plans at any time with 30 days written notice.",
+      },
+      {
+        type: "tiers",
+        items: [
+          {
+            name: "Email Marketing",
+            price: "$300/mo",
+            features: [
+              "Monthly newsletter or promotional email campaign",
+              "List management and segmentation",
+              "Performance reporting (opens, clicks, unsubscribes)",
+              "Campaign copywriting and layout",
+            ],
+            note: "For businesses with an existing customer list that want to stay top of mind without lifting a finger. Any additional email services outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+          },
+          {
+            name: "Site, Maintenance & SEO",
+            price: "$750/mo",
+            features: [
+              "Custom website built for your business",
+              "Ongoing updates and content changes",
+              "Security monitoring and uptime checks",
+              "Google Business Profile optimization",
+              "Local SEO: show up when people search for what you do",
+              "Monthly performance check-in",
+            ],
+            note: "For businesses that want a professional web presence that actually gets found. Any additional site or SEO work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+          },
+          {
+            name: "Site, Maintenance, SEO & Ads",
+            price: "$1,000/mo",
+            features: [
+              "Everything in Site, Maintenance & SEO",
+              "Ad campaign setup and management (Meta or Google)",
+              "Daily budget monitoring and ad creative refreshes",
+              "Monthly ad performance report",
+            ],
+            note: "For businesses ready to actively bring in new leads alongside a maintained, visible web presence. Any additional ad or site work outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+            highlight: true,
+          },
+          {
+            name: "Full Digital Management",
+            price: "$1,500/mo",
+            features: [
+              "Everything in Site, Maintenance, SEO & Ads",
+              "Monthly email marketing campaign",
+              "Social media content and scheduling (up to 2 platforms)",
+              "Unified monthly report across all channels",
+              "Priority response - within 2 business hours",
+            ],
+            note: "For businesses that want everything handled in one place by one person. Any services requested outside this scope will be quoted and added to your monthly rate. Cancel anytime with 7 days written notice, no fees.",
+          },
+        ],
+      },
+      { type: "section-title", text: "One-Time Fees" },
+      {
+        type: "simple-list",
+        items: [
+          "Website Build (No Maintenance): $500 — A clean, professional site built and handed off fully to you. No ongoing commitment.",
+          "Platform Migration & Takeover Setup: $250 — Paid once before work begins. Covers account access, audit, and initial setup. Followed by your choice of Site, Maintenance & SEO ($750/mo) or Site, Maintenance, SEO & Ads ($1,000/mo).",
+        ],
+      },
+      { type: "section-title", text: "Not Sure Which Fits?" },
+      {
+        type: "intro",
+        text: "Every engagement starts with a free discovery call. Fill out the questionnaire in the Client Questionnaire section and I'll reach out within one business day to talk through what makes sense for your business.",
+      },
+      {
+        type: "highlight",
+        text: "You're not committing to anything by reaching out. The first conversation is always free.",
+      },
+    ],
+  },
   "Capacity & Process": {
-  icon: "◈",
-  content: [
-    { type: "section-title", text: "How I Work" },
-    {
-      type: "intro",
-      text: "I keep my client list small on purpose. Every business I work with gets my direct attention: not a ticketing system, not a shared inbox, not someone I delegated it to. That only works if I'm not stretched thin.",
-    },
-    {
-      type: "profile",
-      items: [
-        { label: "Active Clients", value: "4–5 at any given time. When I'm full, I'm full." },
-        { label: "New Projects", value: "One new website build per month during peak season." },
-        { label: "Onboarding", value: "Every new client goes through a 30-day ramp-up so nothing gets missed and nothing gets rushed." },
-        { label: "Off-boarding", value: "If we part ways, you leave with everything. Full credential handoff within 5 business days, no hassle." },
-      ],
-    },
-    { type: "section-title", text: "What Onboarding Looks Like" },
-    {
-      type: "intro",
-      text: "The first 30 days aren't billable chaos; they follow a defined process so you know exactly what's happening and when.",
-    },
-    {
-      type: "checklist",
-      items: [
-        "Audit your current tools, accounts, and digital presence",
-        "Identify gaps and quick wins",
-        "Set up secure credential storage for all managed accounts",
-        "Build or connect your communication channels",
-        "Launch your dashboard or site and confirm everything is stable",
-        "30-day check-in to make sure it's all working for you",
-      ],
-    },
-    {
-      type: "highlight",
-      text: "If my calendar is full, it means the businesses I'm already working with are getting everything I've got. I'd rather tell you that upfront than overpromise.",
-    },
-  ],
-},
+    icon: "◈",
+    content: [
+      { type: "section-title", text: "How I Work" },
+      {
+        type: "intro",
+        text: "I keep my client list small on purpose. Every business I work with gets my direct attention: not a ticketing system, not a shared inbox, not someone I delegated it to. That only works if I'm not stretched thin.",
+      },
+      {
+        type: "profile",
+        items: [
+          { label: "Active Clients", value: "4–5 at any given time. When I'm full, I'm full." },
+          { label: "New Projects", value: "One new website build per month during peak season." },
+          { label: "Onboarding", value: "Every new client goes through a 30-day ramp-up so nothing gets missed and nothing gets rushed." },
+          { label: "Off-boarding", value: "If we part ways, you leave with everything. Full credential handoff within 5 business days, no hassle." },
+        ],
+      },
+      { type: "section-title", text: "What Onboarding Looks Like" },
+      {
+        type: "intro",
+        text: "The first 30 days aren't billable chaos; they follow a defined process so you know exactly what's happening and when.",
+      },
+      {
+        type: "checklist",
+        items: [
+          "Audit your current tools, accounts, and digital presence",
+          "Identify gaps and quick wins",
+          "Set up secure credential storage for all managed accounts",
+          "Build or connect your communication channels",
+          "Launch your dashboard or site and confirm everything is stable",
+          "30-day check-in to make sure it's all working for you",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "If my calendar is full, it means the businesses I'm already working with are getting everything I've got. I'd rather tell you that upfront than overpromise.",
+      },
+    ],
+  },
   "Who You're Working With": {
-  icon: "◈",
-  content: [
-    { type: "section-title", text: "Who You're Working With" },
-    {
-      type: "intro",
-      text: "I'm Anthony Rodriguez, a solo digital operations consultant based in Dayton, Ohio. Before building this practice, I spent six years in the U.S. Army as a Squad Leader and another three years deploying enterprise CRM systems for one of the largest automotive software companies in the country. I know what it means to be accountable for a system that has to work.",
-    },
-    {
-      type: "profile",
-      items: [
-        { label: "Focus", value: "Website management, digital operations, and ad strategy for small service businesses." },
-       { label: "Background", value: "U.S. Army Combat Engineer (Squad Leader), CRM Implementation Specialist at Reynolds & Reynolds, and B.S. Cybersecurity & Networking graduate from Miami University." },
-        { label: "Clearance", value: "U.S. Government Secret Clearance (inactive, eligible for reinstatement)." },
-        { label: "Approach", value: "Solo and intentional. I cap my client roster so every business I work with gets my full attention, not a junior employee's." },
-        { label: "Location", value: "Dayton, Ohio - available remotely." },
-        { label: "Response Time", value: "Non-urgent requests within 1 business day. Site emergencies within 4 business hours." },
-      ],
-    },
-    {
-      type: "highlight",
-      text: "I started this practice because most small businesses don't need an agency, they need one person who knows what they're doing and actually shows up.",
-    },
-  ],
-},
-
+    icon: "◈",
+    content: [
+      { type: "section-title", text: "Who You're Working With" },
+      {
+        type: "intro",
+        text: "I'm Anthony Rodriguez, a solo digital operations consultant based in Dayton, Ohio. Before building this practice, I spent six years in the U.S. Army as a Squad Leader and another three years deploying enterprise CRM systems for one of the largest automotive software companies in the country. I know what it means to be accountable for a system that has to work.",
+      },
+      {
+        type: "profile",
+        items: [
+          { label: "Focus", value: "Website management, digital operations, and ad strategy for small service businesses." },
+          { label: "Background", value: "U.S. Army Combat Engineer (Squad Leader), CRM Implementation Specialist at Reynolds & Reynolds, and B.S. Cybersecurity & Networking graduate from Miami University." },
+          { label: "Certifications", value: "CompTIA Security+ | ICAgile Certified Professional (ICP)" },
+          { label: "Clearance", value: "U.S. Government Secret Clearance (inactive, eligible for reinstatement)." },
+          { label: "Approach", value: "Solo and intentional. I cap my client roster so every business I work with gets my full attention, not a junior employee's." },
+          { label: "Location", value: "Dayton, Ohio — available remotely." },
+          { label: "Response Time", value: "Non-urgent requests within 1 business day. Site emergencies within 4 business hours." },
+        ],
+      },
+      {
+        type: "highlight",
+        text: "I started this practice because most small businesses don't need an agency, they need one person who knows what they're doing and actually shows up.",
+      },
+    ],
+  },
   "Client Questionnaire": {
     icon: "◈",
     content: [],
@@ -248,9 +248,9 @@ const data: OperatingSystemData = {
 
 // --- Components ---
 
-function TierCard({ item, selected, onSelect }: { 
-  item: TierItem; 
-  selected: boolean; 
+function TierCard({ item, selected, onSelect }: {
+  item: TierItem;
+  selected: boolean;
   onSelect: () => void;
 }) {
   return (
@@ -423,7 +423,6 @@ function TierIntakeForm({ tierName, onClose }: { tierName: string; onClose: () =
       flexDirection: "column",
       gap: "20px",
     }}>
-      {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
         <div>
           <div style={{
@@ -456,7 +455,6 @@ function TierIntakeForm({ tierName, onClose }: { tierName: string; onClose: () =
         Fill this out and I'll reach out within one business day to talk through next steps. No commitment required.
       </p>
 
-      {/* Fields */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
         <div>
           <label style={labelStyle}>Your Name</label>
@@ -593,9 +591,7 @@ function TiersBlock({ items }: { items: TierItem[] }) {
             key={j}
             item={item}
             selected={selectedTier === item.name}
-            onSelect={() => setSelectedTier(
-              selectedTier === item.name ? null : item.name
-            )}
+            onSelect={() => setSelectedTier(selectedTier === item.name ? null : item.name)}
           />
         ))}
       </div>
@@ -734,7 +730,6 @@ function SectionContent({ content }: { content: ContentBlock[] }) {
 function ClientQuestionnaire() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [form, setForm] = useState({
-    // Business Basics
     businessName: "",
     ownerName: "",
     email: "",
@@ -742,13 +737,11 @@ function ClientQuestionnaire() {
     industry: "",
     location: "",
     yearsInBusiness: "",
-    // Branding
     hasLogo: "",
     brandColors: "",
     brandFeel: "",
     existingSite: "",
     existingSiteUrl: "",
-    // Goals
     primaryGoal: "",
     targetAudience: "",
     competitors: "",
@@ -770,7 +763,7 @@ function ClientQuestionnaire() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           ...form,
-          _subject: `New Discovery Questionnaire - ${form.businessName}`,
+          _subject: `New Discovery Questionnaire — ${form.businessName}`,
         }),
       });
       if (res.ok) setStatus("success");
@@ -851,7 +844,7 @@ function ClientQuestionnaire() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
       <p style={{ color: "#b0a898", fontSize: "14px", lineHeight: "1.8", margin: 0 }}>
-        Fill this out as completely as you can. There are no wrong answers, this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
+        Fill this out as completely as you can. There are no wrong answers — this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
       </p>
 
       {/* Business Basics */}
@@ -898,8 +891,8 @@ function ClientQuestionnaire() {
             <label style={labelStyle}>Do you have a logo?</label>
             <select name="hasLogo" value={form.hasLogo} onChange={handleChange} style={inputStyle}>
               <option value="">Select one</option>
-              <option>Yes,m I'll send it over</option>
-              <option>No, I need one</option>
+              <option>Yes — I'll send it over</option>
+              <option>No — I need one</option>
               <option>I have something rough</option>
             </select>
           </div>
@@ -1010,7 +1003,7 @@ function ClientQuestionnaire() {
             name="additionalNotes"
             value={form.additionalNotes}
             onChange={handleChange}
-            placeholder="Anything at all, context helps."
+            placeholder="Anything at all — context helps."
             rows={4}
             style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
           />
@@ -1049,6 +1042,7 @@ function ClientQuestionnaire() {
 
 export default function BusinessPlan() {
   const [active, setActive] = useState(SECTIONS[0]);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div style={{
@@ -1100,9 +1094,36 @@ export default function BusinessPlan() {
         </div>
       </div>
 
-      <div style={{ display: "flex", flex: 1 }}>
+      {/* Mobile menu toggle */}
+      <div className="mobile-menu-bar" style={{ display: "none", borderBottom: "1px solid #1e1c1a" }}>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "14px 24px",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            color: "#d0c8b8",
+            fontFamily: "'Courier New', monospace",
+            fontSize: "11px",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+          }}
+        >
+          <span>{active}</span>
+          <span style={{ color: "#c8a96e", fontSize: "16px" }}>{menuOpen ? "✕" : "☰"}</span>
+        </button>
+      </div>
+
+      {/* Body: sidebar + content */}
+      <div className="main-layout" style={{ display: "flex", flex: 1, position: "relative" }}>
+
         {/* Sidebar */}
-        <div style={{
+        <div className={`sidebar ${menuOpen ? "" : "closed"}`} style={{
           width: "220px",
           flexShrink: 0,
           borderRight: "1px solid #1e1c1a",
@@ -1112,7 +1133,7 @@ export default function BusinessPlan() {
           {SECTIONS.map((s) => (
             <button
               key={s}
-              onClick={() => setActive(s)}
+              onClick={() => { setActive(s); setMenuOpen(false); }}
               aria-selected={active === s}
               style={{
                 display: "flex",
@@ -1139,7 +1160,7 @@ export default function BusinessPlan() {
         </div>
 
         {/* Main content */}
-        <div style={{ flex: 1, padding: "36px 48px", overflowY: "auto", maxWidth: "860px" }}>
+        <div className="main-content" style={{ flex: 1, padding: "36px 48px", overflowY: "auto", maxWidth: "860px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "28px" }}>
             <span style={{ fontSize: "20px", color: "#c8a96e" }}>{data[active].icon}</span>
             <h2 style={{ margin: 0, fontSize: "20px", fontWeight: "400", color: "#e8e0d0", letterSpacing: "-0.01em" }}>
@@ -1147,11 +1168,12 @@ export default function BusinessPlan() {
             </h2>
           </div>
           {active === "Client Questionnaire" ? (
-  <ClientQuestionnaire />
-) : (
-  <SectionContent content={data[active].content} />
-)}
+            <ClientQuestionnaire />
+          ) : (
+            <SectionContent content={data[active].content} />
+          )}
         </div>
+
       </div>
 
       {/* Footer */}
