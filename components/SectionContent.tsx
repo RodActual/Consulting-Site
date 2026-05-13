@@ -1,5 +1,4 @@
 import type { ContentBlock, TierItem } from "@/lib/types";
-import Flywheel from "./Flywheel";
 import TiersBlock from "./TiersBlock";
 
 interface SectionContentProps {
@@ -141,10 +140,6 @@ export default function SectionContent({ content }: SectionContentProps) {
               </div>
             ))}
           </div>
-        );
-
-        if (block.type === "flywheel" && block.steps) return (
-          <Flywheel key={i} steps={block.steps} />
         );
 
         if (block.type === "checklist") return (

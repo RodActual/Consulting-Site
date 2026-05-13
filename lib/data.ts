@@ -1,5 +1,3 @@
-import type { OperatingSystemData } from "./types";
-
 export const SECTIONS = [
   "Overview",
   "The Digital Foundation",
