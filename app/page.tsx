@@ -31,27 +31,22 @@ export default function BusinessPlan() {
   borderBottom: "1px solid #1e1c1a",
   padding: "32px 40px",
   background: "rgba(255,255,255,0.01)",
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
 }}>
   
-  {/* LEFT SIDE: Logo and Title */}
-
   <div style={{ display: "flex", alignItems: "center", gap: "16px" }}> 
     <Logo style={{ width: "48px", height: "48px", minWidth: "48px", flexShrink: 0 }} />
     
     <div>
-          <div style={{
-      fontFamily: "'Courier New', monospace",
-      fontSize: "10px",
-      letterSpacing: "0.2em",
-      color: "#ccc8c8",
-      textTransform: "uppercase",
-      marginBottom: "6px",
-    }}>
-      Digital Operations Architecture
-    </div>
+      <div style={{
+        fontFamily: "'Courier New', monospace",
+        fontSize: "10px",
+        letterSpacing: "0.2em",
+        color: "#ccc8c8",
+        textTransform: "uppercase",
+        marginBottom: "6px",
+      }}>
+        Digital Operations Architecture
+      </div>
 
       <h1 style={{
         margin: 0,
@@ -69,19 +64,6 @@ export default function BusinessPlan() {
     </div>
   </div>
 
-  {/* RIGHT SIDE: Architecture Label & Details */}
-  <div style={{ textAlign: "right" }}>
-    
-    <div style={{
-      fontFamily: "'Courier New', monospace",
-      fontSize: "11px",
-      color: "#a8a397",
-      lineHeight: "1.6",
-    }}>
-      <div>Solo Consultant</div>
-      <div>Est. April 2026</div>
-    </div>
-  </div>
 </div>
 
       {/* Mobile menu toggle */}
