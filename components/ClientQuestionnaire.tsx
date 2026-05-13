@@ -119,7 +119,7 @@ export default function ClientQuestionnaire() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
       <p style={{ color: "#b0a898", fontSize: "14px", lineHeight: "1.8", margin: 0 }}>
-        Unsure of which tier you fit into?Fill this out as completely as you can. There are no wrong answers, this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
+        Unsure of which tier you fit into? Fill this out as completely as you can. There are no wrong answers, this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
       </p>
 
       {/* Business Basics */}
