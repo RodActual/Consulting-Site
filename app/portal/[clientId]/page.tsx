@@ -40,7 +40,7 @@ export default async function PortalPage({ params }: { params: Promise<{ clientI
               }}
             >
               {/* Fallback to a generic link icon if link.icon is missing */}
-              <div style={{ fontSize: "28px", marginBottom: "16px" }}>{link.icon || "🔗"}</div>
+              <div style={{ fontSize: "28px", marginBottom: "16px" }}></div>
               <div style={{ fontSize: "18px", color: "#FAFAFA", marginBottom: "8px" }}>{link.label}</div>
               <div style={{ fontSize: "12px", color: "#7a7268" }}>Access Secure Resource →</div>
             </a>
