@@ -16,13 +16,17 @@ export default function TiersBlock({ items }: TiersBlockProps) {
     <div>
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
         {items.map((item, j) => (
-          <TierCard
-            key={j}
-            item={item}
-            selected={selectedTier === item.name}
-            onSelect={() => setSelectedTier(selectedTier === item.name ? null : item.name)}
-          />
-        ))}
+<TierCard
+    key={j}
+    item={item}
+    selected={selectedTier === item.name}
+    onSelect={() => {
+      // Prevent selection if the tier is full
+      if (item.isFull) return; 
+      setSelectedTier(selectedTier === item.name ? null : item.name);
+    }}
+  />
+))}
       </div>
       {selectedTier && (
         <TierIntakeForm

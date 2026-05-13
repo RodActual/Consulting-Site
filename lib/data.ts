@@ -79,6 +79,8 @@ export const data: Record<string, { icon: string; content: any[] }> = {
           {
             name: "Email Marketing",
             price: "$300/mo",
+            //isFull: true,
+            //remove the comment above once at capacity
             features: [
               "Monthly newsletter or promotional email campaign",
               "List management and segmentation",
@@ -90,6 +92,8 @@ export const data: Record<string, { icon: string; content: any[] }> = {
           {
             name: "Site, Maintenance & SEO",
             price: "$750/mo",
+            //isFull: true,
+            //remove the comment above once at capacity
             features: [
               "Custom website built for your business",
               "Ongoing updates and content changes",
@@ -103,6 +107,8 @@ export const data: Record<string, { icon: string; content: any[] }> = {
           {
             name: "Site, Maintenance, SEO & Ads",
             price: "$1,000/mo",
+            //isFull: true,
+            //remove the comment above once at capacity
             features: [
               "Everything in Site, Maintenance & SEO",
               "Ad campaign setup and management (Meta or Google)",
@@ -115,6 +121,8 @@ export const data: Record<string, { icon: string; content: any[] }> = {
           {
             name: "Full Digital Management",
             price: "$1,500/mo",
+            //isFull: true,
+            //remove the comment above once at capacity
             features: [
               "Everything in Site, Maintenance, SEO & Ads",
               "Monthly email marketing campaign",

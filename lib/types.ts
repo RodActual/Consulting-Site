@@ -4,6 +4,7 @@ export interface TierItem {
   features: string[];
   note?: string;
   highlight?: boolean;
+  isFull?: boolean;
 }
 
 export interface ContentBlock {
