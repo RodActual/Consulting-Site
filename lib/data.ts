@@ -20,9 +20,9 @@ export const data: Record<string, { icon: string; content: any[] }> = {
       {
         type: "pillars",
         items: [
-          { label: "Centralize", desc: "Design a unified, secure infrastructure that replaces your scattered tools." },
-          { label: "Protect", desc: "Eliminate data leaks, lost passwords, and communication silos with enterprise-grade encryption." },
-          { label: "Automate", desc: "Automate lead flow and reporting so your business grows without increasing your workload." },
+          { label: "Centralize", desc: "Design a unified, secure infrastructure that replaces your scattered tools.", color: "#c8a96e"},
+          { label: "Protect", desc: "Eliminate data leaks, lost passwords, and communication silos with enterprise-grade encryption.", color: "#60a5fa"},
+          { label: "Automate", desc: "Automate lead flow and reporting so your business grows without increasing your workload.", color: "#34d399"},
         ],
       },
       {

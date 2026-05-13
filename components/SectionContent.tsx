@@ -47,7 +47,7 @@ export default function SectionContent({ content }: SectionContentProps) {
 
         if (block.type === "pillars") return (
           <div key={i} style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            {block.items?.map((p, j) => (
+            {block.items?.map((p: any, j) => (
               <div key={j} style={{
                 flex: "1", minWidth: "160px",
                 background: "rgba(255,255,255,0.02)",
@@ -55,7 +55,15 @@ export default function SectionContent({ content }: SectionContentProps) {
                 borderRadius: "3px",
                 padding: "16px",
               }}>
-                <div style={{ fontFamily: "'Courier New', monospace", fontSize: "11px", color: "#c8a96e", marginBottom: "4px" }}>
+                {/* UPDATED: This label now uses the specific color from your data.ts file! 
+                  If no color is provided, it falls back to the default gold.
+                */}
+                <div style={{ 
+                  fontFamily: "'Courier New', monospace", 
+                  fontSize: "11px", 
+                  color: p.color || "#c8a96e", 
+                  marginBottom: "4px" 
+                }}>
                   {p.label}
                 </div>
                 <div style={{ fontSize: "12px", color: "#7a7268", lineHeight: "1.6" }}>
@@ -107,7 +115,7 @@ export default function SectionContent({ content }: SectionContentProps) {
 
         if (block.type === "simple-list") return (
           <ul key={i} style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "8px" }}>
-            {block.items?.map((item, j) => (
+            {block.items?.map((item: any, j) => (
               <li key={j} style={{ display: "flex", gap: "10px", fontSize: "13px", color: "#8a8278" }}>
                 <span style={{ color: "#3a3530", flexShrink: 0, marginTop: "1px" }}>◆</span>
                 <span>{item}</span>
@@ -118,7 +126,7 @@ export default function SectionContent({ content }: SectionContentProps) {
 
         if (block.type === "profile") return (
           <div key={i} style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
-            {block.items?.map((item, j) => (
+            {block.items?.map((item: any, j) => (
               <div key={j} style={{
                 display: "grid", gridTemplateColumns: "160px 1fr",
                 gap: "16px", padding: "10px 0",
@@ -141,7 +149,7 @@ export default function SectionContent({ content }: SectionContentProps) {
 
         if (block.type === "checklist") return (
           <div key={i} style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-            {block.items?.map((item, j) => (
+            {block.items?.map((item: any, j) => (
               <div key={j} style={{ display: "flex", gap: "10px", fontSize: "13px", color: "#8a8278" }}>
                 <span style={{
                   color: "#2a4a2a",
