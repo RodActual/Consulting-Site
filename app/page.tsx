@@ -119,16 +119,33 @@ export default function BusinessPlan() {
 
       </div>
 
-      {/* Footer */}
+{/* Footer */}
       <div style={{
-        borderTop: "1px solid #a8a397",
-        padding: "12px 40px",
+        borderTop: "1px solid #1e1c1a", // Darkened to match the sidebar borders
+        padding: "24px 40px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
       }}>
         <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#a8a397" }}>
           © 2026 Rodriguez Digital Operations, LLC. All rights reserved.
+        </div>
+
+        <div>
+          <a href="/portal/login-notice" style={{ 
+            fontSize: "10px", 
+            color: "#8a8278", 
+            textDecoration: "none", 
+            fontFamily: "'Courier New', monospace",
+            letterSpacing: "0.1em",
+            borderBottom: "1px solid transparent",
+            transition: "all 0.2s ease"
+          }}
+          onMouseOver={(e) => e.currentTarget.style.color = "#c8a96e"}
+          onMouseOut={(e) => e.currentTarget.style.color = "#8a8278"}
+          >
+            CLIENT PORTAL ACCESS
+          </a>
         </div>
       </div>
     </div>
