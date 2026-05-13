@@ -1,6 +1,6 @@
 export const clientPortals: Record<string, any> = {
   "r04cymNBvi": {
-    name: "JW Cleaning",
+    name: "JW-Cleaning, LLC.",
     links: [
       { 
         label: "Encrypted File Vault", 
@@ -26,8 +26,8 @@ export const clientPortals: Record<string, any> = {
     },
 
     serviceRequests: {
-        upgradeUrl: "mailto:anthony@yourdomain.com?subject=Tier Change Request - JW Cleaning&body=Hi Anthony,%0D%0A%0D%0AI would like to discuss changing the current service tier for JW Cleaning.%0D%0A%0D%0APlease mark the tier you are interested in moving to:%0D%0A%0D%0A[ ] Digital Foundation%0D%0A[ ] Digital Growth%0D%0A[ ] Digital Enterprise%0D%0A%0D%0ABest regards,",
-        cancelUrl: "mailto:anthony@yourdomain.com?subject=Service Termination Notice - JW Cleaning&body=I am writing to formally notify you of my intent to end services with you for JW Cleaning."
+        upgradeUrl: "mailto:anthony@yourdomain.com?subject=Tier Change Request - JW-Cleaning, LLC.&body=Hi Anthony,%0D%0A%0D%0AI would like to discuss changing the current service tier for JW Cleaning.%0D%0A%0D%0APlease mark the tier you are interested in moving to:%0D%0A%0D%0A[ ] Digital Foundation%0D%0A[ ] Digital Growth%0D%0A[ ] Digital Enterprise%0D%0A%0D%0ABest regards,",
+        cancelUrl: "mailto:anthony@yourdomain.com?subject=Service Termination Notice - JW-Cleaning, LLC.&body=I am writing to formally notify you of my intent to end services with you for JW-Cleaning, LLC."
     }
   },
   // Add more clients as you onboard them
