@@ -5,6 +5,7 @@ import { SECTIONS, data } from "@/lib/data";
 import Sidebar from "@/components/Sidebar";
 import SectionContent from "@/components/SectionContent";
 import ClientQuestionnaire from "@/components/ClientQuestionnaire";
+import { Logo } from "@/components/Logo";
 
 export default function BusinessPlan() {
   const [active, setActive] = useState<(typeof SECTIONS)[number]>(SECTIONS[0]);
@@ -24,50 +25,64 @@ export default function BusinessPlan() {
       display: "flex",
       flexDirection: "column",
     }}>
-      {/* Header */}
-      <div style={{
-        borderBottom: "1px solid #1e1c1a",
-        padding: "32px 40px 24px",
-        background: "rgba(255,255,255,0.01)",
-      }}>
-        <div style={{
-          fontFamily: "'Courier New', monospace",
-          fontSize: "10px",
-          letterSpacing: "0.2em",
-          color: "#a8a397",
-          textTransform: "uppercase",
-          marginBottom: "8px",
-        }}>
-          Digital Operations Architecture
-        </div>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <div>
-            <h1 style={{
-              margin: 0,
-              fontSize: "28px",
-              fontWeight: "400",
-              letterSpacing: "-0.01em",
-              color: "#a8a397",
-              lineHeight: "1.2",
-            }}>
-              Rodriguez Digital Operations, LLC.
-            </h1>
-            <div style={{ color: "#a8a397", fontSize: "13px", marginTop: "4px", fontStyle: "italic" }}>
-              Building secure, scalable systems for service businesses.
-            </div>
-          </div>
+
+{/* Header */}
+<div style={{
+  borderBottom: "1px solid #1e1c1a",
+  padding: "32px 40px",
+  background: "rgba(255,255,255,0.01)",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+}}>
+  
+  {/* LEFT SIDE: Logo and Title */}
+
+  <div style={{ display: "flex", alignItems: "center", gap: "16px" }}> 
+    <Logo style={{ width: "48px", height: "48px", minWidth: "48px", flexShrink: 0 }} />
+    
+    <div>
           <div style={{
-            fontFamily: "'Courier New', monospace",
-            fontSize: "11px",
-            color: "#a8a397",
-            textAlign: "right",
-            lineHeight: "1.8",
-          }}>
-            <div>Solo Consultant</div>
-            <div>Est. April 2026</div>
-          </div>
-        </div>
+      fontFamily: "'Courier New', monospace",
+      fontSize: "10px",
+      letterSpacing: "0.2em",
+      color: "#ccc8c8",
+      textTransform: "uppercase",
+      marginBottom: "6px",
+    }}>
+      Digital Operations Architecture
+    </div>
+
+      <h1 style={{
+        margin: 0,
+        fontSize: "28px",
+        fontWeight: "400",
+        letterSpacing: "-0.01em",
+        color: "#ccc8c8",
+        lineHeight: "1.2",
+      }}>
+        Rodriguez Digital Operations, LLC.
+      </h1>
+      <div style={{ color: "#a8a397", fontSize: "13px", marginTop: "4px", fontStyle: "italic" }}>
+        Building secure, scalable systems for service businesses.
       </div>
+    </div>
+  </div>
+
+  {/* RIGHT SIDE: Architecture Label & Details */}
+  <div style={{ textAlign: "right" }}>
+    
+    <div style={{
+      fontFamily: "'Courier New', monospace",
+      fontSize: "11px",
+      color: "#a8a397",
+      lineHeight: "1.6",
+    }}>
+      <div>Solo Consultant</div>
+      <div>Est. April 2026</div>
+    </div>
+  </div>
+</div>
 
       {/* Mobile menu toggle */}
       <div className="mobile-menu-bar" style={{ display: "none", borderBottom: "1px solid #1e1c1a" }}>
