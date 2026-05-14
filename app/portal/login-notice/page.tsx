@@ -30,8 +30,8 @@ export default function LoginNotice() {
         </h1>
         
         <p style={{ fontSize: "14px", lineHeight: "1.8", color: "#8a8278", marginBottom: "32px" }}>
-          Client portals are end-to-end encrypted and accessible only via 
-          private, unique keys provided during onboarding. 
+          Client portals are restricted to authorized partners and accessible only via unique, private access keys provided during onboarding.
+ 
           <br /><br />
           If you are an active client and have lost your access key, 
           please contact Anthony Rodriguez directly.
