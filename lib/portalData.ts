@@ -26,8 +26,7 @@ export const clientPortals: Record<string, any> = {
     agreement: {
       status: "Active",
       renewal: "Monthly",
-      tier: "Site, Maintenance, SEO & Ads"
-      
+      tier: "Full Digital Management"
     },
 
     serviceRequests: {
