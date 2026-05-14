@@ -14,9 +14,14 @@ export const clientPortals: Record<string, any> = {
         },
     {   
         label: "Billing & Invoices", 
-        url: "mailto:anthony@yourdomain.com?subject=Early Invoice Request&body=Hi Anthony, I would like to request my invoice for this month early.", 
+        url: "mailto:rodactual@proton.me?subject=Early Invoice Request&body=Hi Anthony, I would like to request my invoice for this month early.", 
         subtext: "Invoices are issued on the 1st. Click to request early."
-}
+    },
+    {
+      label: "Performance Dashboard",
+      url: "https://datastudio.google.com/s/mBuV-ZyW2HY",
+      subtext: "Track your key performance indicators in real-time with our interactive dashboard."
+    }
     ],
     agreement: {
       status: "Active",
@@ -26,10 +31,9 @@ export const clientPortals: Record<string, any> = {
     },
 
     serviceRequests: {
-        upgradeUrl: "mailto:anthony@yourdomain.com?subject=Tier Change Request - JW-Cleaning, LLC.&body=Hi Anthony,%0D%0A%0D%0AI would like to discuss changing the current service tier for JW Cleaning.%0D%0A%0D%0APlease mark the tier you are interested in moving to:%0D%0A%0D%0A[ ] Digital Foundation%0D%0A[ ] Digital Growth%0D%0A[ ] Digital Enterprise%0D%0A%0D%0ABest regards,",
-        cancelUrl: "mailto:anthony@yourdomain.com?subject=Service Termination Notice - JW-Cleaning, LLC.&body=I am writing to formally notify you of my intent to end services with you for JW-Cleaning, LLC."
+        upgradeUrl: "mailto:rodactual@proton.me?subject=Tier Change Request - JW-Cleaning, LLC.&body=Hi Anthony,%0D%0A%0D%0AI would like to discuss changing the current service tier for JW Cleaning.%0D%0A%0D%0APlease mark the tier you are interested in moving to:%0D%0A%0D%0A[ ] Digital Foundation%0D%0A[ ] Digital Growth%0D%0A[ ] Digital Enterprise%0D%0A%0D%0ABest regards,",
+        cancelUrl: "mailto:rodactual@proton.me?subject=Service Termination Notice - JW-Cleaning, LLC.&body=I am writing to formally notify you of my intent to end services with you for JW-Cleaning, LLC."
     }
   },
   // Add more clients as you onboard them
-  //{ label: "Live KPI Dashboard", url: "https://lookerstudio.google.com/..."},
 };
