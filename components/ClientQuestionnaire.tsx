@@ -50,7 +50,7 @@ const sectionLabelStyle: React.CSSProperties = {
   marginBottom: "4px",
 };
 
-export default function ClientQuestionnaire() {
+export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: string }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [form, setForm] = useState({
     businessName: "",
@@ -86,6 +86,7 @@ export default function ClientQuestionnaire() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           ...form,
+          ...(selectedTier ? { interestedIn: selectedTier } : {}),
           _subject: `New Discovery Questionnaire — ${form.businessName}`,
         }),
       });
@@ -118,8 +119,29 @@ export default function ClientQuestionnaire() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+
+      {selectedTier && (
+        <div style={{
+          borderLeft: "3px solid #c8a96e",
+          paddingLeft: "16px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "4px",
+        }}>
+          <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", letterSpacing: "0.15em", color: "#5a5248", textTransform: "uppercase" }}>
+            Interested In
+          </div>
+          <div style={{ fontFamily: "'Georgia', serif", fontSize: "16px", color: "#c8a96e" }}>
+            {selectedTier}
+          </div>
+        </div>
+      )}
+
       <p style={{ color: "#b0a898", fontSize: "14px", lineHeight: "1.8", margin: 0 }}>
-        Unsure of which tier you fit into? Fill this out as completely as you can. There are no wrong answers, this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters.
+        {selectedTier
+          ? "Fill this out as completely as you can. This helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters."
+          : "Unsure of which tier you fit into? Fill this out as completely as you can. There are no wrong answers, this helps me understand your business before our first conversation so we can skip the small talk and get straight to what matters."
+        }
       </p>
 
       {/* Business Basics */}

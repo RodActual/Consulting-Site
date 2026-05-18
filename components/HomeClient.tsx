@@ -14,9 +14,16 @@ export default function HomeClient() {
 
   const [active, setActive] = useState<(typeof SECTIONS)[number]>(initialSection);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState<string | null>(null);
 
   const handleSelect = (section: (typeof SECTIONS)[number]) => {
     setActive(section);
+    setMenuOpen(false);
+  };
+
+  const handleTierSelect = (tier: string) => {
+    setSelectedTier(tier);
+    setActive("Client Questionnaire");
     setMenuOpen(false);
   };
 
@@ -65,9 +72,9 @@ export default function HomeClient() {
             </h2>
           </div>
           {active === "Client Questionnaire" ? (
-            <ClientQuestionnaire />
+            <ClientQuestionnaire selectedTier={selectedTier ?? undefined} />
           ) : (
-            <SectionContent content={data[active].content} />
+            <SectionContent content={data[active].content} onTierSelect={handleTierSelect} />
           )}
         </main>
       </div>

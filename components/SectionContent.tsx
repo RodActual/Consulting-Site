@@ -3,9 +3,10 @@ import TiersBlock from "./TiersBlock";
 
 interface SectionContentProps {
   content: ContentBlock[];
+  onTierSelect?: (tier: string) => void;
 }
 
-export default function SectionContent({ content }: SectionContentProps) {
+export default function SectionContent({ content, onTierSelect }: SectionContentProps) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
       {content.map((block, i) => {
@@ -109,7 +110,7 @@ export default function SectionContent({ content }: SectionContentProps) {
         );
 
         if (block.type === "tiers") return (
-          <TiersBlock key={i} items={block.items as TierItem[]} />
+          <TiersBlock key={i} items={block.items as TierItem[]} onTierSelect={onTierSelect} />
         );
 
         if (block.type === "simple-list") return (
