@@ -27,6 +27,20 @@ body {
   color: #c8a96e;
 }
 
+.footer-service-link {
+  font-size: 10px;
+  color: #5a5248;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.footer-service-link:hover {
+  color: #c8a96e;
+}
+
 @media (max-width: 640px) {
   .mobile-menu-bar {
     display: block !important;
