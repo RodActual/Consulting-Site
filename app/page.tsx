@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import HomeClient from "@/components/HomeClient";
@@ -49,7 +50,9 @@ export default function BusinessPlan() {
         </div>
       </header>
 
-      <HomeClient />
+      <Suspense fallback={null}>
+        <HomeClient />
+      </Suspense>
 
       {/* Footer */}
       <footer style={{
