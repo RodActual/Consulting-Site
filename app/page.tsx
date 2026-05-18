@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import HomeClient from "@/components/HomeClient";
 
@@ -56,14 +56,31 @@ export default function BusinessPlan() {
       {/* Footer */}
       <footer style={{
         borderTop: "1px solid #1e1c1a",
-        padding: "24px 40px",
+        padding: "32px 40px",
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: "flex-start",
+        flexWrap: "wrap",
+        gap: "24px",
       }}>
         <div style={{ fontFamily: "'Courier New', monospace", fontSize: "10px", color: "#a8a397" }}>
           © 2026 Rodriguez Digital Operations, LLC. All rights reserved.
         </div>
+
+        <nav style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "center" }}>
+          {[
+            { label: "Email Marketing", href: "/services/email-marketing" },
+            { label: "Website Design & SEO", href: "/services/website-design-and-seo" },
+            { label: "Ads Management", href: "/services/ads-management" },
+            { label: "Full Digital Management", href: "/services/full-digital-management" },
+            { label: "Dayton, OH", href: "/dayton-ohio-web-design" },
+          ].map(({ label, href }) => (
+            <Link key={href} href={href} className="footer-service-link">
+              {label}
+            </Link>
+          ))}
+        </nav>
+
         <a href="/portal/login-notice" className="portal-link">
           CLIENT PORTAL ACCESS
         </a>
