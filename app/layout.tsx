@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Rodriguez Digital Operations, LLC.",
     description: "Stop juggling tools. I build secure, scalable systems for service businesses.",
     type: "website",
-    url: "https://digi-ops.vercel.app", // Update this when you get a custom .com domain!
+    url: "https://rodriguezdigitalops.dev/",
   },
 };
 

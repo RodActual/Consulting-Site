@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://digi-ops.vercel.app/sitemap.xml
+Sitemap: https://rodriguezdigitalops.dev/sitemap.xml

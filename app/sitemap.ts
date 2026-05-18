@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://digi-ops.vercel.app',
+      url: 'https://rodriguezdigitalops.dev',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
