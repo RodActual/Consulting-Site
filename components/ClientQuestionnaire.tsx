@@ -16,6 +16,8 @@ const inputStyle: React.CSSProperties = {
   transition: "border-color 0.15s ease",
 };
 
+const errorBorder: React.CSSProperties = { borderColor: "#6b2f2f" };
+
 const labelStyle: React.CSSProperties = {
   fontFamily: "'Courier New', monospace",
   fontSize: "10px",
@@ -50,8 +52,22 @@ const sectionLabelStyle: React.CSSProperties = {
   marginBottom: "4px",
 };
 
+const errorMsgStyle: React.CSSProperties = {
+  fontSize: "10px",
+  color: "#8a3a3a",
+  fontFamily: "'Courier New', monospace",
+  marginTop: "4px",
+};
+
+const REQUIRED = new Set([
+  "businessName", "ownerName", "email", "phone", "industry", "location",
+  "yearsInBusiness", "hasLogo", "brandColors", "brandFeel", "existingSite",
+  "primaryGoal", "targetAudience", "competitors", "successLookLike", "timeline",
+]);
+
 export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: string }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [form, setForm] = useState({
     businessName: "",
     ownerName: "",
@@ -74,11 +90,34 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: "" }));
+  };
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    for (const field of REQUIRED) {
+      if (!form[field as keyof typeof form]?.trim()) {
+        newErrors[field] = "This field is required.";
+      }
+    }
+    if (form.existingSite === "Yes" && !form.existingSiteUrl.trim()) {
+      newErrors.existingSiteUrl = "This field is required.";
+    }
+    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "Enter a valid email address.";
+    }
+    return newErrors;
   };
 
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    const newErrors = validate();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
     setStatus("submitting");
     try {
       const res = await fetch("https://formspree.io/f/xjglzgep", {
@@ -109,13 +148,20 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
         QUESTIONNAIRE RECEIVED
       </div>
       <div style={{ fontFamily: "'Georgia', serif", fontSize: "16px", color: "#d0c8b8", marginBottom: "8px" }}>
-        Thank you, I'll be in touch within one business day.
+        Thank you, I&apos;ll be in touch within one business day.
       </div>
       <div style={{ fontSize: "12px", color: "#5a5248" }}>
         A copy of your responses has been sent to rodactual@proton.me
       </div>
     </div>
   );
+
+  const err = (field: string) => errors[field]
+    ? <div style={errorMsgStyle}>{errors[field]}</div>
+    : null;
+
+  const inp = (field: string): React.CSSProperties =>
+    ({ ...inputStyle, ...(errors[field] ? errorBorder : {}) });
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
@@ -163,20 +209,22 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
                 value={(form as any)[f.name]}
                 onChange={handleChange}
                 placeholder={f.placeholder}
-                style={inputStyle}
+                style={inp(f.name)}
               />
+              {err(f.name)}
             </div>
           ))}
         </div>
         <div style={fieldStyle}>
           <label style={labelStyle}>How long have you been in business?</label>
-          <select name="yearsInBusiness" value={form.yearsInBusiness} onChange={handleChange} style={inputStyle}>
+          <select name="yearsInBusiness" value={form.yearsInBusiness} onChange={handleChange} style={inp("yearsInBusiness")}>
             <option value="">Select one</option>
             <option>Less than 1 year</option>
             <option>1–3 years</option>
             <option>3–5 years</option>
             <option>5+ years</option>
           </select>
+          {err("yearsInBusiness")}
         </div>
       </div>
 
@@ -186,20 +234,22 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
           <div style={fieldStyle}>
             <label style={labelStyle}>Do you have a logo?</label>
-            <select name="hasLogo" value={form.hasLogo} onChange={handleChange} style={inputStyle}>
+            <select name="hasLogo" value={form.hasLogo} onChange={handleChange} style={inp("hasLogo")}>
               <option value="">Select one</option>
-              <option>Yes — I'll send it over</option>
+              <option>Yes — I&apos;ll send it over</option>
               <option>No — I need one</option>
               <option>I have something rough</option>
             </select>
+            {err("hasLogo")}
           </div>
           <div style={fieldStyle}>
             <label style={labelStyle}>Do you have an existing website?</label>
-            <select name="existingSite" value={form.existingSite} onChange={handleChange} style={inputStyle}>
+            <select name="existingSite" value={form.existingSite} onChange={handleChange} style={inp("existingSite")}>
               <option value="">Select one</option>
               <option>Yes</option>
               <option>No</option>
             </select>
+            {err("existingSite")}
           </div>
         </div>
         {form.existingSite === "Yes" && (
@@ -210,8 +260,9 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
               value={form.existingSiteUrl}
               onChange={handleChange}
               placeholder="https://yoursite.com"
-              style={inputStyle}
+              style={inp("existingSiteUrl")}
             />
+            {err("existingSiteUrl")}
           </div>
         )}
         <div style={fieldStyle}>
@@ -221,8 +272,9 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
             value={form.brandColors}
             onChange={handleChange}
             placeholder="e.g. Navy blue and white, or 'no idea yet'"
-            style={inputStyle}
+            style={inp("brandColors")}
           />
+          {err("brandColors")}
         </div>
         <div style={fieldStyle}>
           <label style={labelStyle}>How would you describe the feel you want your website to have?</label>
@@ -232,8 +284,9 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
             onChange={handleChange}
             placeholder="e.g. Clean and professional, friendly and approachable, bold and modern..."
             rows={3}
-            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+            style={{ ...inp("brandFeel"), resize: "vertical", lineHeight: "1.6" }}
           />
+          {err("brandFeel")}
         </div>
       </div>
 
@@ -242,7 +295,7 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
         <div style={sectionLabelStyle}>Goals</div>
         <div style={fieldStyle}>
           <label style={labelStyle}>What is the primary goal of your website?</label>
-          <select name="primaryGoal" value={form.primaryGoal} onChange={handleChange} style={inputStyle}>
+          <select name="primaryGoal" value={form.primaryGoal} onChange={handleChange} style={inp("primaryGoal")}>
             <option value="">Select one</option>
             <option>Generate leads / get more calls</option>
             <option>Sell products online</option>
@@ -250,6 +303,7 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
             <option>Replace an outdated site</option>
             <option>All of the above</option>
           </select>
+          {err("primaryGoal")}
         </div>
         <div style={fieldStyle}>
           <label style={labelStyle}>Who is your ideal customer?</label>
@@ -259,8 +313,9 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
             onChange={handleChange}
             placeholder="e.g. Homeowners in the Dayton area, ages 30–55, busy professionals..."
             rows={3}
-            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+            style={{ ...inp("targetAudience"), resize: "vertical", lineHeight: "1.6" }}
           />
+          {err("targetAudience")}
         </div>
         <div style={fieldStyle}>
           <label style={labelStyle}>Any competitors or sites you admire? (links welcome)</label>
@@ -270,8 +325,9 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
             onChange={handleChange}
             placeholder="e.g. 'I like how cleaningco.com looks' or 'nothing in particular'"
             rows={3}
-            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+            style={{ ...inp("competitors"), resize: "vertical", lineHeight: "1.6" }}
           />
+          {err("competitors")}
         </div>
         <div style={fieldStyle}>
           <label style={labelStyle}>What does success look like 6 months from now?</label>
@@ -281,18 +337,20 @@ export default function ClientQuestionnaire({ selectedTier }: { selectedTier?: s
             onChange={handleChange}
             placeholder="e.g. More booked appointments, a site I'm proud to show people, leads coming in without me chasing them..."
             rows={3}
-            style={{ ...inputStyle, resize: "vertical", lineHeight: "1.6" }}
+            style={{ ...inp("successLookLike"), resize: "vertical", lineHeight: "1.6" }}
           />
+          {err("successLookLike")}
         </div>
         <div style={fieldStyle}>
-          <label style={labelStyle}>What's your ideal timeline to launch?</label>
-          <select name="timeline" value={form.timeline} onChange={handleChange} style={inputStyle}>
+          <label style={labelStyle}>What&apos;s your ideal timeline to launch?</label>
+          <select name="timeline" value={form.timeline} onChange={handleChange} style={inp("timeline")}>
             <option value="">Select one</option>
             <option>As soon as possible</option>
             <option>Within 30 days</option>
             <option>Within 60 days</option>
             <option>No hard deadline</option>
           </select>
+          {err("timeline")}
         </div>
         <div style={fieldStyle}>
           <label style={labelStyle}>Anything else I should know?</label>

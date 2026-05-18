@@ -17,6 +17,7 @@ export default function HomeClient() {
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
 
   const handleSelect = (section: (typeof SECTIONS)[number]) => {
+    setSelectedTier(null);
     setActive(section);
     setMenuOpen(false);
   };
