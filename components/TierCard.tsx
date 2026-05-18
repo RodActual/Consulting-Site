@@ -1,12 +1,14 @@
+import Link from "next/link";
 import type { TierItem } from "@/lib/types";
 
 interface TierCardProps {
-  item: TierItem & { isFull?: boolean }; // Adding isFull to the type definition
+  item: TierItem & { isFull?: boolean };
   selected: boolean;
   onSelect: () => void;
+  learnMoreUrl?: string;
 }
 
-export default function TierCard({ item, selected, onSelect }: TierCardProps) {
+export default function TierCard({ item, selected, onSelect, learnMoreUrl }: TierCardProps) {
   const isFull = item.isFull;
 
   return (
@@ -90,6 +92,25 @@ export default function TierCard({ item, selected, onSelect }: TierCardProps) {
         <div style={{ marginTop: "14px", fontSize: "11px", color: "#5a5248", fontStyle: "italic" }}>
           {item.note}
         </div>
+      )}
+
+      {learnMoreUrl && (
+        <Link href={learnMoreUrl} style={{
+          display: "block",
+          marginTop: "12px",
+          fontSize: "10px",
+          color: "#5a5248",
+          textDecoration: "none",
+          fontFamily: "'Courier New', monospace",
+          letterSpacing: "0.1em",
+          textAlign: "center",
+          transition: "color 0.15s ease",
+        }}
+        onMouseOver={(e) => e.currentTarget.style.color = "#c8a96e"}
+        onMouseOut={(e) => e.currentTarget.style.color = "#5a5248"}
+        >
+          Learn more →
+        </Link>
       )}
 
       <button
