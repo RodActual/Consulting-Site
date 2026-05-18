@@ -9,11 +9,20 @@ export const metadata: Metadata = {
   description: "I build secure, scalable digital operating systems for service businesses. Replace chaotic tools with a unified, encrypted infrastructure.",
   keywords: ["digital operations", "fractional consultant", "business systems", "secure infrastructure", "service business", "website hosting", "website building", "automation", "data management", "scalable systems", "ad management", "email marketing", "analytics", "custom solutions"],
   authors: [{ name: "Anthony Rodriguez" }],
+  metadataBase: new URL("https://rodriguezdigitalops.dev"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Rodriguez Digital Operations, LLC.",
     description: "Stop juggling tools. I build secure, scalable systems for service businesses.",
     type: "website",
     url: "https://rodriguezdigitalops.dev/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rodriguez Digital Operations, LLC.",
+    description: "Stop juggling tools. I build secure, scalable systems for service businesses.",
   },
 };
 
@@ -33,7 +42,7 @@ export default function RootLayout({
       "name": "Anthony Rodriguez"
     },
     "description": "Building secure, scalable systems for service businesses.",
-    "url": "https://digi-ops.vercel.app", // Update this when you get a custom .com domain!
+    "url": "https://rodriguezdigitalops.dev",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Dayton",
