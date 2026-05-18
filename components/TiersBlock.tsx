@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import type { TierItem } from "@/lib/types";
 import TierCard from "./TierCard";
-import TierIntakeForm from "./TierIntakeForm";
 
 const TIER_URLS: Record<string, string> = {
   "Email Marketing": "/services/email-marketing",
@@ -14,33 +12,23 @@ const TIER_URLS: Record<string, string> = {
 
 interface TiersBlockProps {
   items: TierItem[];
+  onTierSelect?: (tier: string) => void;
 }
 
-export default function TiersBlock({ items }: TiersBlockProps) {
-  const [selectedTier, setSelectedTier] = useState<string | null>(null);
-
+export default function TiersBlock({ items, onTierSelect }: TiersBlockProps) {
   return (
-    <div>
-      <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-        {items.map((item, j) => (
-          <TierCard
-            key={j}
-            item={item}
-            selected={selectedTier === item.name}
-            learnMoreUrl={TIER_URLS[item.name]}
-            onSelect={() => {
-              if (item.isFull) return;
-              setSelectedTier(selectedTier === item.name ? null : item.name);
-            }}
-          />
-        ))}
-      </div>
-      {selectedTier && (
-        <TierIntakeForm
-          tierName={selectedTier}
-          onClose={() => setSelectedTier(null)}
+    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+      {items.map((item, j) => (
+        <TierCard
+          key={j}
+          item={item}
+          learnMoreUrl={TIER_URLS[item.name]}
+          onSelect={() => {
+            if (item.isFull) return;
+            onTierSelect?.(item.name);
+          }}
         />
-      )}
+      ))}
     </div>
   );
 }

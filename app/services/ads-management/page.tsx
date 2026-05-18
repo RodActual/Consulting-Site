@@ -29,6 +29,7 @@ export default function AdsManagementPage() {
       price="$1,000/mo"
       priceNote="Month-to-month. No contracts, no lock-in. Cancel anytime with 30 days written notice. Ad spend is billed separately and goes directly to the platform — you keep full control of your budget."
       accentColor="#60a5fa"
+      tier="Site, Maintenance, SEO & Ads"
     />
   );
 }

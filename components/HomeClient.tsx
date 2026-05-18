@@ -11,12 +11,21 @@ export default function HomeClient() {
   const searchParams = useSearchParams();
   const sectionParam = searchParams.get("section");
   const initialSection = (SECTIONS.includes(sectionParam as typeof SECTIONS[number]) ? sectionParam : SECTIONS[0]) as typeof SECTIONS[number];
+  const initialTier = searchParams.get("tier");
 
   const [active, setActive] = useState<(typeof SECTIONS)[number]>(initialSection);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState<string | null>(initialTier);
 
   const handleSelect = (section: (typeof SECTIONS)[number]) => {
+    setSelectedTier(null);
     setActive(section);
+    setMenuOpen(false);
+  };
+
+  const handleTierSelect = (tier: string) => {
+    setSelectedTier(tier);
+    setActive("Client Questionnaire");
     setMenuOpen(false);
   };
 
@@ -65,9 +74,9 @@ export default function HomeClient() {
             </h2>
           </div>
           {active === "Client Questionnaire" ? (
-            <ClientQuestionnaire />
+            <ClientQuestionnaire selectedTier={selectedTier ?? undefined} />
           ) : (
-            <SectionContent content={data[active].content} />
+            <SectionContent content={data[active].content} onTierSelect={handleTierSelect} />
           )}
         </main>
       </div>
