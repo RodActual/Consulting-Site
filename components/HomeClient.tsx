@@ -11,10 +11,11 @@ export default function HomeClient() {
   const searchParams = useSearchParams();
   const sectionParam = searchParams.get("section");
   const initialSection = (SECTIONS.includes(sectionParam as typeof SECTIONS[number]) ? sectionParam : SECTIONS[0]) as typeof SECTIONS[number];
+  const initialTier = searchParams.get("tier");
 
   const [active, setActive] = useState<(typeof SECTIONS)[number]>(initialSection);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedTier, setSelectedTier] = useState<string | null>(null);
+  const [selectedTier, setSelectedTier] = useState<string | null>(initialTier);
 
   const handleSelect = (section: (typeof SECTIONS)[number]) => {
     setSelectedTier(null);

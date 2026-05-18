@@ -11,6 +11,7 @@ interface ServicePageProps {
   price: string;
   priceNote: string;
   accentColor?: string;
+  tier?: string;
 }
 
 export default function ServicePage({
@@ -22,7 +23,11 @@ export default function ServicePage({
   price,
   priceNote,
   accentColor = "#c8a96e",
+  tier,
 }: ServicePageProps) {
+  const questionnaireHref = tier
+    ? `/?section=Client+Questionnaire&tier=${encodeURIComponent(tier)}`
+    : "/?section=Client+Questionnaire";
   return (
     <div style={{
       minHeight: "100vh",
@@ -190,7 +195,7 @@ export default function ServicePage({
           </div>
         </div>
 
-        <Link href="/?section=Client+Questionnaire" style={{
+        <Link href={questionnaireHref} style={{
           display: "inline-block",
           background: "#c8a96e",
           color: "#0a0908",

@@ -28,6 +28,7 @@ export default function EmailMarketingPage() {
       price="$300/mo"
       priceNote="Month-to-month. No contracts, no lock-in. Cancel anytime with 30 days written notice — no fees, no hassle. Additional email services outside this scope are quoted separately."
       accentColor="#34d399"
+      tier="Email Marketing"
     />
   );
 }

@@ -30,6 +30,7 @@ export default function WebsiteDesignPage() {
       price="$750/mo"
       priceNote="Month-to-month. No contracts, no lock-in. Cancel anytime with 30 days written notice. Also available as a one-time build for $500 — site delivered fully set up with no ongoing commitment."
       accentColor="#c8a96e"
+      tier="Site, Maintenance & SEO"
     />
   );
 }

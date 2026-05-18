@@ -29,6 +29,7 @@ export default function FullDigitalManagementPage() {
       price="$1,500/mo"
       priceNote="Month-to-month. No contracts, no lock-in. Cancel anytime with 30 days written notice. Services requested outside this scope are quoted and added to your monthly rate."
       accentColor="#c8a96e"
+      tier="Full Digital Management"
     />
   );
 }
