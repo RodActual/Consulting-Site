@@ -1,13 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { SECTIONS, data } from "@/lib/data";
 import Sidebar from "@/components/Sidebar";
 import SectionContent from "@/components/SectionContent";
 import ClientQuestionnaire from "@/components/ClientQuestionnaire";
 
 export default function HomeClient() {
-  const [active, setActive] = useState<(typeof SECTIONS)[number]>(SECTIONS[0]);
+  const searchParams = useSearchParams();
+  const sectionParam = searchParams.get("section");
+  const initialSection = (SECTIONS.includes(sectionParam as typeof SECTIONS[number]) ? sectionParam : SECTIONS[0]) as typeof SECTIONS[number];
+
+  const [active, setActive] = useState<(typeof SECTIONS)[number]>(initialSection);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSelect = (section: (typeof SECTIONS)[number]) => {

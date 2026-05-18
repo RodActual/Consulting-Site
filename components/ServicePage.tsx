@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import ServiceNav from "@/components/ServiceNav";
 
 interface ServicePageProps {
   label: string;
@@ -68,6 +69,8 @@ export default function ServicePage({
           ← Overview
         </Link>
       </header>
+
+      <ServiceNav />
 
       {/* Main */}
       <main style={{ flex: 1, maxWidth: "760px", margin: "0 auto", padding: "64px 40px", width: "100%" }}>
@@ -187,7 +190,7 @@ export default function ServicePage({
           </div>
         </div>
 
-        <Link href="/" style={{
+        <Link href="/?section=Client+Questionnaire" style={{
           display: "inline-block",
           background: "#c8a96e",
           color: "#0a0908",
