@@ -13,6 +13,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.portal-link {
+  font-size: 10px;
+  color: #8a8278;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.portal-link:hover {
+  color: #c8a96e;
+}
+
 @media (max-width: 640px) {
   .mobile-menu-bar {
     display: block !important;

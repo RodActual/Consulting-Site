@@ -1,3 +1,5 @@
+"use client";
+
 import type { OperatingSystemData } from "@/lib/types";
 
 interface SidebarProps {
