@@ -1,4 +1,5 @@
 User-Agent: *
 Allow: /
+Disallow: /portal/
 
 Sitemap: https://rodriguezdigitalops.dev/sitemap.xml
