@@ -1,5 +1,6 @@
 import type { ContentBlock, TierItem } from "@/lib/types";
 import TiersBlock from "./TiersBlock";
+import SocialLinks from "./SocialLinks";
 
 interface SectionContentProps {
   content: ContentBlock[];
@@ -159,6 +160,10 @@ export default function SectionContent({ content, onTierSelect }: SectionContent
               </div>
             ))}
           </div>
+        );
+
+        if (block.type === "social-links") return (
+          <SocialLinks key={i} />
         );
 
         return null;
