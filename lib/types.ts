@@ -18,7 +18,8 @@ export interface ContentBlock {
     | "simple-list"
     | "profile"
     | "flywheel"
-    | "checklist";
+    | "checklist"
+    | "social-links";
   text?: string;
   items?: any[];
   headers?: string[];

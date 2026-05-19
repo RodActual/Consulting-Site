@@ -216,6 +216,9 @@ export const data: Record<string, { icon: string; content: any[] }> = {
         type: "highlight",
         text: "I started this practice because most small businesses don't need an agency, they need one person who knows what they're doing and actually shows up.",
       },
+      {
+        type: "social-links",
+      },
     ],
   },
   "Client Questionnaire": {
